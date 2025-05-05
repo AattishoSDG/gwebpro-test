@@ -7,6 +7,7 @@ import FixedScrolling from "../components/FixedScrolling";
 import Link from "next/link";
 import NavLink from "../components/NavLink";
 import { PricingListItemCheck } from "../components/SVG";
+import Image from "next/image";
 
 export default function ServicesLevelThree() {
   return (
@@ -36,7 +37,7 @@ export default function ServicesLevelThree() {
             <div className="col-md-6">
               <div className="video-container">
                 <video
-                  src="images/service-level-3-banner.mp4"
+                  src="/images/service-level-3-banner.mp4"
                   autoPlay
                   muted
                   loop
@@ -58,28 +59,48 @@ export default function ServicesLevelThree() {
               <div className="stats-wrapper">
                 <div className="stats">
                   <div className="icon">
-                    <img src="images/business-stats-yellow.png" alt="" />
+                    <Image
+                      src="/images/business-stats-yellow.png"
+                      alt=""
+                      width="64"
+                      height="64"
+                    />
                     <div className="number">500+</div>
                   </div>
                   <div className="field">Digital Experts</div>
                 </div>
                 <div className="stats">
                   <div className="icon">
-                    <img src="images/business-stats-purple.png" alt="" />
+                    <Image
+                      src="/images/business-stats-purple.png"
+                      alt=""
+                      width="64"
+                      height="64"
+                    />
                     <div className="number">28</div>
                   </div>
                   <div className="field">Year Track Record</div>
                 </div>
                 <div className="stats">
                   <div className="icon">
-                    <img src="images/business-stats-green.png" alt="" />
+                    <Image
+                      src="/images/business-stats-green.png"
+                      alt=""
+                      width="64"
+                      height="64"
+                    />
                     <div className="number">1100+</div>
                   </div>
                   <div className="field">Reviews</div>
                 </div>
                 <div className="stats">
                   <div className="icon">
-                    <img src="images/business-stats-blue.png" alt="" />
+                    <Image
+                      src="/images/business-stats-blue.png"
+                      alt=""
+                      width="64"
+                      height="64"
+                    />
                     <div className="number">In-house</div>
                   </div>
                   <div className="field">Technology</div>
@@ -96,7 +117,7 @@ export default function ServicesLevelThree() {
               <div className="col-md-6">
                 <div className="video-container">
                   <video
-                    src="images/jumbling_dollars.mp4"
+                    src="/images/jumbling_dollars.mp4"
                     autoPlay
                     muted
                     loop
@@ -211,7 +232,7 @@ export default function ServicesLevelThree() {
                     <div className="price-row">
                       <div className="plan">
                         <p>
-                          Silver <br/>
+                          Silver <br />
                           <span>Per Month</span>
                         </p>
                       </div>
@@ -417,10 +438,15 @@ export default function ServicesLevelThree() {
                     <div className="upper">
                       <span>
                         25% Greater
-                        <br/>
+                        <br />
                         Marketing ROI
                       </span>
-                      <img src="images/gwebpro_logo_white.webp" alt="" />
+                      <Image
+                        src="/images/gwebpro_logo_white.webp"
+                        alt=""
+                        width={149}
+                        height={42}
+                      />
                     </div>
                     <div className="lower">
                       <ul>
@@ -474,7 +500,7 @@ export default function ServicesLevelThree() {
                     <div className="upper">
                       <p>
                         In-house
-                        <br/>
+                        <br />
                         SEO
                       </p>
                     </div>

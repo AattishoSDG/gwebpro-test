@@ -1,5 +1,6 @@
+"use client";
 import { useState } from "react";
-import DOMPurify from "dompurify";
+// import DOMPurify from "dompurify";
 
 const AccordionTypeOne = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState(0); // Default open first accordion
@@ -29,7 +30,7 @@ const AccordionTypeOne = ({ data }) => {
               <div className="accordion_content">
                 <div
                   dangerouslySetInnerHTML={{
-                    __html: DOMPurify.sanitize(item.content),
+                    __html: item.content,
                   }}
                 />
               </div>

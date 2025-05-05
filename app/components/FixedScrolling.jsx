@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -47,7 +48,7 @@ export default function FixedScrolling() {
 
   const [windowWidth, setWindowWidth] = useState(0);
   useEffect(() => {
-    setWindowWidth(window.innerWidth)
+    setWindowWidth(window.innerWidth);
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };

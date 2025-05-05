@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import AccordionTypeOne from "../components/AccordionTypeOne";
 import CheckScreenWidth from "../components/CheckScreenWidth";
 import useIsMobile from "../components/useIsMobile";
@@ -8,6 +8,7 @@ import "swiper/css/bundle";
 import { useState } from "react";
 import AccordionTypeTwo from "../components/AccordionTypeTwo";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Services() {
   const [secondSwiper, setSecondSwiper] = useState(null);
@@ -32,7 +33,7 @@ export default function Services() {
                 <CheckScreenWidth setWidth={991}>
                   <div className="video-container">
                     <video
-                      src="images/services-banner.mp4"
+                      src="/images/services-banner.mp4"
                       autoPlay
                       muted
                       loop
@@ -110,7 +111,7 @@ export default function Services() {
             <div className="col-md-5">
               <div className="video-container has-cta">
                 <video
-                  src="images/services_level_two_accordion.mp4"
+                  src="/images/services_level_two_accordion.mp4"
                   autoPlay
                   muted
                   loop
@@ -145,7 +146,12 @@ export default function Services() {
                   <SwiperSlide>
                     <div className="card-you_get">
                       <div className="icon">
-                        <img src="images/workstation_yellow.png" />
+                        <Image
+                          src="/images/workstation_yellow.png"
+                          alt=""
+                          width={84}
+                          height={84}
+                        />
                       </div>
                       <p className="title">Technological Advancement</p>
                       <p className="text">
@@ -161,7 +167,12 @@ export default function Services() {
                   <SwiperSlide>
                     <div className="card-you_get">
                       <div className="icon">
-                        <img src="images/workstation_green.png" />
+                        <Image
+                          src="/images/workstation_green.png"
+                          alt=""
+                          width={84}
+                          height={84}
+                        />
                       </div>
                       <p className="title">Technological Advancement</p>
                       <p className="text">
@@ -177,7 +188,12 @@ export default function Services() {
                   <SwiperSlide>
                     <div className="card-you_get">
                       <div className="icon">
-                        <img src="images/workstation_purple.png" />
+                        <Image
+                          src="/images/workstation_purple.png"
+                          alt=""
+                          width={84}
+                          height={84}
+                        />
                       </div>
                       <p className="title">Technological Advancement</p>
                       <p className="text">
@@ -193,7 +209,12 @@ export default function Services() {
                   <SwiperSlide>
                     <div className="card-you_get">
                       <div className="icon">
-                        <img src="images/workstation_blue.png" />
+                        <Image
+                          src="/images/workstation_blue.png"
+                          alt=""
+                          width={84}
+                          height={84}
+                        />
                       </div>
                       <p className="title">Technological Advancement</p>
                       <p className="text">
@@ -213,7 +234,12 @@ export default function Services() {
                 <div className="col-6">
                   <div className="card-you_get">
                     <div className="icon">
-                      <img src="images/workstation_yellow.png" />
+                      <Image
+                        src="/images/workstation_yellow.png"
+                        alt=""
+                        width={84}
+                        height={84}
+                      />
                     </div>
                     <p className="title">Technological Advancement</p>
                     <p className="text">
@@ -229,7 +255,12 @@ export default function Services() {
                 <div className="col-6">
                   <div className="card-you_get">
                     <div className="icon">
-                      <img src="images/workstation_green.png" />
+                      <Image
+                        src="/images/workstation_green.png"
+                        alt=""
+                        width={84}
+                        height={84}
+                      />
                     </div>
                     <p className="title">Technological Advancement</p>
                     <p className="text">
@@ -245,7 +276,12 @@ export default function Services() {
                 <div className="col-6">
                   <div className="card-you_get">
                     <div className="icon">
-                      <img src="images/workstation_purple.png" />
+                      <Image
+                        src="/images/workstation_purple.png"
+                        alt=""
+                        width={84}
+                        height={84}
+                      />
                     </div>
                     <p className="title">Technological Advancement</p>
                     <p className="text">
@@ -261,7 +297,12 @@ export default function Services() {
                 <div className="col-6">
                   <div className="card-you_get">
                     <div className="icon">
-                      <img src="images/workstation_blue.png" />
+                      <Image
+                        src="/images/workstation_blue.png"
+                        alt=""
+                        width={84}
+                        height={84}
+                      />
                     </div>
                     <p className="title">Technological Advancement</p>
                     <p className="text">
@@ -303,7 +344,12 @@ export default function Services() {
             <SwiperSlide>
               <Link href="/">
                 <div className="card_service">
-                  <img src="images/digital-experience-development.png" alt="" />
+                  <Image
+                    src="/images/digital-experience-development.png"
+                    alt=""
+                    width="96"
+                    height="96"
+                  />
                   <div className="title">Digital Experience Development</div>
                 </div>
               </Link>
@@ -311,7 +357,12 @@ export default function Services() {
             <SwiperSlide>
               <Link href="/">
                 <div className="card_service">
-                  <img src="images/ecommerce.png" alt="" />
+                  <Image
+                    src="/images/ecommerce.png"
+                    alt=""
+                    width="96"
+                    height="96"
+                  />
                   <div className="title">Ecommerce Development</div>
                 </div>
               </Link>
@@ -319,7 +370,12 @@ export default function Services() {
             <SwiperSlide>
               <Link href="/">
                 <div className="card_service">
-                  <img src="images/website-development.png" alt="" />
+                  <Image
+                    src="/images/website-development.png"
+                    alt=""
+                    width="96"
+                    height="96"
+                  />
                   <div className="title">Website Development</div>
                 </div>
               </Link>
@@ -327,7 +383,12 @@ export default function Services() {
             <SwiperSlide>
               <Link href="/">
                 <div className="card_service">
-                  <img src="images/mobile-app.png" alt="" />
+                  <Image
+                    src="/images/mobile-app.png"
+                    alt=""
+                    width="96"
+                    height="96"
+                  />
                   <div className="title">Mobile App Development</div>
                 </div>
               </Link>
@@ -335,7 +396,12 @@ export default function Services() {
             <SwiperSlide>
               <Link href="/">
                 <div className="card_service">
-                  <img src="images/web-infrastructure.png" alt="" />
+                  <Image
+                    src="/images/web-infrastructure.png"
+                    alt=""
+                    width="96"
+                    height="96"
+                  />
                   <div className="title">Web Infrastructure & Maintenance</div>
                 </div>
               </Link>
@@ -343,7 +409,12 @@ export default function Services() {
             <SwiperSlide>
               <Link href="/">
                 <div className="card_service">
-                  <img src="images/content-management.png" alt="" />
+                  <Image
+                    src="/images/content-management.png"
+                    alt=""
+                    width="96"
+                    height="96"
+                  />
                   <div className="title">Content Management Systems</div>
                 </div>
               </Link>
@@ -397,9 +468,11 @@ export default function Services() {
                 <SwiperSlide>
                   <div className="client-info">
                     <div className="client">
-                      <img
-                        src="images/gwebpro_client_inspire_paintings.svg"
+                      <Image
+                        src="/images/gwebpro_client_inspire_paintings.svg"
                         alt=""
+                        width={93}
+                        height={93}
                       />
                       <h3>Client Name</h3>
                       <p>Industry Name</p>
@@ -409,9 +482,11 @@ export default function Services() {
                 <SwiperSlide>
                   <div className="client-info">
                     <div className="client">
-                      <img
-                        src="images/gwebpro_client_inspire_paintings.svg"
+                      <Image
+                        src="/images/gwebpro_client_inspire_paintings.svg"
                         alt=""
+                        width={93}
+                        height={93}
                       />
                       <h3>Client Name</h3>
                       <p>Industry Name</p>
@@ -421,9 +496,11 @@ export default function Services() {
                 <SwiperSlide>
                   <div className="client-info">
                     <div className="client">
-                      <img
-                        src="images/gwebpro_client_inspire_paintings.svg"
+                      <Image
+                        src="/images/gwebpro_client_inspire_paintings.svg"
                         alt=""
+                        width={93}
+                        height={93}
                       />
                       <h3>Client Name</h3>
                       <p>Industry Name</p>
@@ -494,7 +571,7 @@ export default function Services() {
             {/* <CheckScreenWidth setWidth={767}> */}
             <div className="col-md-5">
               <div className="video-container">
-                <video src="images/faq_video.mp4" autoPlay muted loop></video>
+                <video src="/images/faq_video.mp4" autoPlay muted loop></video>
               </div>
             </div>
             {/* </CheckScreenWidth> */}

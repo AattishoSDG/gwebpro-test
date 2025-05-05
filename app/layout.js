@@ -3,8 +3,8 @@ import "./styles/style.css";
 import "./styles/res.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { LoadingProvider } from "./providers/LoadingProvider";
-import { NavigationEvents } from "./components/NavigationEvents";
+// import { LoadingProvider } from "./providers/LoadingProvider";
+// import { NavigationEvents } from "./components/NavigationEvents";
 
 const DMSans = DM_Sans({
   variable: "--main_font",
@@ -34,12 +34,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${DMSans.variable} ${ExoFont.variable}`}>
-        <LoadingProvider>
-          <Header />
-          {children}
-          <NavigationEvents />
-          <Footer />
-        </LoadingProvider>
+        {/* <LoadingProvider> */}
+        <Header />
+        {children}
+        {/* <NavigationEvents /> */}
+        <Footer />
+        {/* </LoadingProvider> */}
       </body>
     </html>
   );

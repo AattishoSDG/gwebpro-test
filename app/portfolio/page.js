@@ -1,10 +1,11 @@
 "use client";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import NavLink from "../components/NavLink";
 import CheckScreenWidth from "../components/CheckScreenWidth";
 import BrandMarket from "../components/BrandMarket";
+import Image from "next/image";
 
 export default function Portfolio() {
   // const [scrollbarHeight, setScrollbarHeight] = useState(0);
@@ -102,7 +103,12 @@ export default function Portfolio() {
                         <a href="#">View Live Site</a>
                       </div>
                       <div className="col-md-6">
-                        <img src="images/portfolio-gta-ev.webp" alt="" />
+                        <Image
+                          src="/images/portfolio-gta-ev.webp"
+                          alt=""
+                          width={739}
+                          height={477}
+                        />
                       </div>
                     </div>
                     <div className="row portfolio-row">
@@ -126,9 +132,11 @@ export default function Portfolio() {
                         <a href="">View Live Site</a>
                       </div>
                       <div className="col-md-6">
-                        <img
-                          src="images/portfolio-trust-mortgages.webp"
+                        <Image
+                          src="/images/portfolio-trust-mortgages.webp"
                           alt=""
+                          width={739}
+                          height={477}
                         />
                       </div>
                     </div>
@@ -153,14 +161,25 @@ export default function Portfolio() {
                         <a href="">View Live Site</a>
                       </div>
                       <div className="col-md-6">
-                        <img src="images/portfolio-woodbine.webp" alt="" />
+                        <Image
+                          src="/images/portfolio-woodbine.webp"
+                          alt=""
+                          width={739}
+                          height={477}
+                        />
                       </div>
                     </div>
                   </div>
                   <div className="row view-more">
                     <div className="col-12">
                       <button>
-                        View more <img src="images/rounded-rarr.svg" alt="" />
+                        View more{" "}
+                        <Image
+                          src="/images/rounded-rarr.svg"
+                          alt=""
+                          width={56}
+                          height={17}
+                        />
                       </button>
                     </div>
                   </div>
@@ -182,7 +201,14 @@ export default function Portfolio() {
                 </Tab>
                 <Tab
                   as={"button"}
-                  title={<img src="images/search-icon.svg" />}
+                  title={
+                    <Image
+                      src="/images/search-icon.svg"
+                      width={26}
+                      height={26}
+                      alt=""
+                    />
+                  }
                 ></Tab>
               </Tabs>
             </div>

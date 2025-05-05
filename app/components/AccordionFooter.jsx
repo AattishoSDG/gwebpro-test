@@ -89,7 +89,7 @@
 // };
 
 // export default AccordionFooter;
-
+"use client";
 import { useState } from "react";
 // import { Link } from "react-router-dom";
 import Link from "next/link";

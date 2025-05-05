@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Slider from 'react-slick';
+"use client";
+import React, { useState, useEffect, useRef } from "react";
+import Slider from "react-slick";
 
 const AutoScrollSlider = () => {
   const sliderRef = useRef(null);
@@ -31,7 +32,9 @@ const AutoScrollSlider = () => {
     stopAutoScroll(); // Clear any existing interval
     autoScrollInterval.current = setInterval(() => {
       if (sliderRef.current) {
-        direction === "left" ? sliderRef.current.slickPrev() : sliderRef.current.slickNext();
+        direction === "left"
+          ? sliderRef.current.slickPrev()
+          : sliderRef.current.slickNext();
       }
     }, 1000); // Adjust the interval as needed
   };
@@ -44,17 +47,30 @@ const AutoScrollSlider = () => {
   };
 
   return (
-    <div className='container mt-5'
+    <div
+      className="container mt-5"
       onMouseMove={handleMouseMove}
       onMouseLeave={stopAutoScroll}
     >
       <Slider ref={sliderRef} {...settings}>
-        <div><h3>Slide 1</h3></div>
-        <div><h3>Slide 2</h3></div>
-        <div><h3>Slide 3</h3></div>
-        <div><h3>Slide 4</h3></div>
-        <div><h3>Slide 5</h3></div>
-        <div><h3>Slide 6</h3></div>
+        <div>
+          <h3>Slide 1</h3>
+        </div>
+        <div>
+          <h3>Slide 2</h3>
+        </div>
+        <div>
+          <h3>Slide 3</h3>
+        </div>
+        <div>
+          <h3>Slide 4</h3>
+        </div>
+        <div>
+          <h3>Slide 5</h3>
+        </div>
+        <div>
+          <h3>Slide 6</h3>
+        </div>
       </Slider>
     </div>
   );

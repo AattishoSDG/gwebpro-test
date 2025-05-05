@@ -48,19 +48,13 @@
 // export default Loader;
 // ABOVE CODE IS OLD AND USED FOR THE REACT VERSION OF THE APP
 
-
-
 export default function Loader() {
   return (
-    <div
-          className={`custom-loading ${
-            true ? "show" : "hide"
-          }`}
-        >
-          <div className="spinner">
-            <img src="images/gwebpro_logo.png" alt="" />
-            <div className="disc"></div>
-          </div>
-        </div>
-  )
+    <div className={`custom-loading ${"show"}`}>
+      <div className="spinner">
+        <img src="images/gwebpro_logo.png" alt="" />
+        <div className="disc"></div>
+      </div>
+    </div>
+  );
 }

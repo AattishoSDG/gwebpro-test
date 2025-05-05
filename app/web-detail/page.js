@@ -1,4 +1,5 @@
-"use client"
+"use client";
+import Image from "next/image";
 import CheckMobile from "../components/CheckMobile";
 import CheckScreenWidth from "../components/CheckScreenWidth";
 
@@ -48,7 +49,12 @@ export default function WebPortfolio() {
                 </div>
               </div>
               <div className="col-md-6 image-col">
-                <img src="images/web-portfolio-banner.png" alt="" />
+                <Image
+                  src="/images/web-portfolio-banner.png"
+                  alt=""
+                  width={1026}
+                  height={739}
+                />
               </div>
             </div>
           </div>
@@ -69,7 +75,7 @@ export default function WebPortfolio() {
                   <CheckScreenWidth setWidth={991}>
                     <div className="video-container">
                       <video
-                        src="images/services-banner.mp4"
+                        src="/images/services-banner.mp4"
                         autoPlay
                         muted
                         loop
@@ -85,7 +91,12 @@ export default function WebPortfolio() {
         <div className="container web-portfolio-mobile">
           <div className="row gy-4">
             <div className="col-12 text-center">
-              <img src="images/web-portfolio-banner-mobile.png" alt="" />
+              <Image
+                src="/images/web-portfolio-banner-mobile.png"
+                alt=""
+                width={192}
+                height={390}
+              />
             </div>
             <div className="col">
               <div className="card-project-detail white">
@@ -144,7 +155,7 @@ export default function WebPortfolio() {
             <div className="col px-0">
               <div className="video-container">
                 <video
-                  src="images/web-portfolio-1.mp4"
+                  src="/images/web-portfolio-1.mp4"
                   autoPlay
                   muted
                   loop
@@ -172,7 +183,7 @@ export default function WebPortfolio() {
             <div className="col-md-6">
               <div className="video-container">
                 <video
-                  src="images/web-portfolio-2.webm"
+                  src="/images/web-portfolio-2.webm"
                   autoPlay
                   muted
                   loop
@@ -206,7 +217,7 @@ export default function WebPortfolio() {
               <div className="col-lg-6">
                 <div className="video-container">
                   <video
-                    src="images/web-portfolio-3.mp4"
+                    src="/images/web-portfolio-3.mp4"
                     autoPlay
                     muted
                     loop
@@ -218,7 +229,12 @@ export default function WebPortfolio() {
                   <p>
                     <span>Platform</span>
                     <span>
-                      <img src="images/gwebpro_wordpress.png" alt="" />{" "}
+                      <Image
+                        src="/images/gwebpro_wordpress.png"
+                        alt=""
+                        width={22}
+                        height={22}
+                      />{" "}
                       WordPress
                     </span>
                   </p>

@@ -19,6 +19,7 @@ import CheckMobile from "../components/CheckMobile";
 import useScrollDirection from "../hooks/useScrollDirection";
 import NavLink from "../components/NavLink";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Services() {
   const [firstSwiper, setFirstSwiper] = useState(null);
@@ -61,7 +62,7 @@ export default function Services() {
                 <CheckScreenWidth setWidth={991}>
                   <div className="video-container">
                     <video
-                      src="images/services-banner.mp4"
+                      src="/images/services-banner.mp4"
                       autoPlay
                       muted
                       loop
@@ -189,7 +190,12 @@ export default function Services() {
                 <div className="col-lg-3 col-md-4 col-sm-6">
                   <div className="revenue-card yellow">
                     <div className="logo">
-                      <img src="images/yellow-revenue.png" alt="" />
+                      <Image
+                        src="/images/yellow-revenue.png"
+                        alt=""
+                        width={39}
+                        height={40}
+                      />
                     </div>
                     <h3>Custom CRM Solutions</h3>
                     <p>
@@ -201,7 +207,12 @@ export default function Services() {
                 <div className="col-lg-3 col-md-4 col-sm-6">
                   <div className="revenue-card purple">
                     <div className="logo">
-                      <img src="images/purple-revenue.png" alt="" />
+                      <Image
+                        src="/images/purple-revenue.png"
+                        alt=""
+                        width={39}
+                        height={40}
+                      />
                     </div>
                     <h3>Custom CRM Solutions</h3>
                     <p>
@@ -213,7 +224,12 @@ export default function Services() {
                 <div className="col-lg-3 col-md-4 col-sm-6">
                   <div className="revenue-card green">
                     <div className="logo">
-                      <img src="images/green-revenue.png" alt="" />
+                      <Image
+                        src="/images/green-revenue.png"
+                        alt=""
+                        width={39}
+                        height={40}
+                      />
                     </div>
                     <h3>Custom CRM Solutions</h3>
                     <p>
@@ -225,7 +241,12 @@ export default function Services() {
                 <div className="col-lg-3 col-md-4 col-sm-6">
                   <div className="revenue-card blue">
                     <div className="logo">
-                      <img src="images/blue-revenue.png" alt="" />
+                      <Image
+                        src="/images/blue-revenue.png"
+                        alt=""
+                        width={39}
+                        height={40}
+                      />
                     </div>
                     <h3>Custom CRM Solutions</h3>
                     <p>
@@ -243,7 +264,12 @@ export default function Services() {
                     <SwiperSlide style={{ width: "auto" }}>
                       <div className="revenue-card yellow">
                         <div className="logo">
-                          <img src="images/yellow-revenue.png" alt="" />
+                          <Image
+                            src="/images/yellow-revenue.png"
+                            alt=""
+                            width={39}
+                            height={40}
+                          />
                         </div>
                         <h3>Custom CRM Solutions</h3>
                         <p>
@@ -255,7 +281,12 @@ export default function Services() {
                     <SwiperSlide style={{ width: "auto" }}>
                       <div className="revenue-card purple">
                         <div className="logo">
-                          <img src="images/purple-revenue.png" alt="" />
+                          <Image
+                            src="/images/purple-revenue.png"
+                            alt=""
+                            width={39}
+                            height={40}
+                          />
                         </div>
                         <h3>Custom CRM Solutions</h3>
                         <p>
@@ -267,7 +298,12 @@ export default function Services() {
                     <SwiperSlide style={{ width: "auto" }}>
                       <div className="revenue-card green">
                         <div className="logo">
-                          <img src="images/green-revenue.png" alt="" />
+                          <Image
+                            src="/images/green-revenue.png"
+                            alt=""
+                            width={39}
+                            height={40}
+                          />
                         </div>
                         <h3>Custom CRM Solutions</h3>
                         <p>
@@ -279,7 +315,12 @@ export default function Services() {
                     <SwiperSlide style={{ width: "auto" }}>
                       <div className="revenue-card blue">
                         <div className="logo">
-                          <img src="images/blue-revenue.png" alt="" />
+                          <Image
+                            src="/images/blue-revenue.png"
+                            alt=""
+                            width={39}
+                            height={40}
+                          />
                         </div>
                         <h3>Custom CRM Solutions</h3>
                         <p>
@@ -311,7 +352,7 @@ export default function Services() {
                 <div className="col-lg-6">
                   <div className="video-container">
                     <video
-                      src="images/home-integrated.mp4"
+                      src="/images/home-integrated.mp4"
                       autoPlay={true}
                       loop={true}
                       muted={true}
@@ -406,11 +447,21 @@ export default function Services() {
                 >
                   <SwiperSlide style={{ width: "auto" }}>
                     <div className="impact-slider">
-                      <img src="images/impact-slider-2.webp" alt="" />
+                      <Image
+                        src="/images/impact-slider-2.webp"
+                        alt=""
+                        width={1612}
+                        height={547}
+                      />
                       <div className="content">
                         <div className="title">
                           <div className="icon">
-                            <img src="/images/blue-revenue.png" alt="" />
+                            <Image
+                              src="/images/blue-revenue.png"
+                              alt=""
+                              width={40}
+                              height={40}
+                            />
                           </div>
                           <h2>Monthly Reporting</h2>
                         </div>
@@ -430,11 +481,21 @@ export default function Services() {
                   </SwiperSlide>
                   <SwiperSlide style={{ width: "auto" }}>
                     <div className="impact-slider">
-                      <img src="images/impact-slider-1.webp" alt="" />
+                      <Image
+                        src="/images/impact-slider-1.webp"
+                        alt=""
+                        width={1612}
+                        height={547}
+                      />
                       <div className="content">
                         <div className="title">
                           <div className="icon">
-                            <img src="/images/blue-revenue.png" alt="" />
+                            <Image
+                              src="/images/blue-revenue.png"
+                              alt=""
+                              width={40}
+                              height={40}
+                            />
                           </div>
                           <h2>Monthly Reporting</h2>
                         </div>
@@ -478,7 +539,12 @@ export default function Services() {
                   <div className="col">
                     <div className="expert-box yellow">
                       <div className="icon">
-                        <img src="images/track-record.png" alt="" />
+                        <Image
+                          src="/images/track-record.png"
+                          alt=""
+                          width={64}
+                          height={64}
+                        />
                       </div>
                       <h4 className="title">28-year</h4>
                       <p>Track Record</p>
@@ -487,7 +553,12 @@ export default function Services() {
                   <div className="col">
                     <div className="expert-box purple">
                       <div className="icon">
-                        <img src="images/likes.png" alt="" />
+                        <Image
+                          src="/images/likes.png"
+                          alt=""
+                          width={64}
+                          height={64}
+                        />
                       </div>
                       <h4 className="title">1,000s</h4>
                       <p>Reviews</p>
@@ -496,7 +567,12 @@ export default function Services() {
                   <div className="col">
                     <div className="expert-box green">
                       <div className="icon">
-                        <img src="images/leads-gen.png" alt="" />
+                        <Image
+                          src="/images/leads-gen.png"
+                          alt=""
+                          width={64}
+                          height={64}
+                        />
                       </div>
                       <h4 className="title">7 million+</h4>
                       <p>Leads Generated</p>
@@ -505,7 +581,12 @@ export default function Services() {
                   <div className="col">
                     <div className="expert-box blue">
                       <div className="icon">
-                        <img src="images/digital-exp.png" alt="" />
+                        <Image
+                          src="/images/digital-exp.png"
+                          alt=""
+                          width={64}
+                          height={64}
+                        />
                       </div>
                       <h4 className="title">500+</h4>
                       <p>Digital Experts</p>
@@ -519,16 +600,36 @@ export default function Services() {
                   <div className="techs">
                     <ul>
                       <li>
-                        <img src="images/google-analytics.png" alt="" />
+                        <Image
+                          src="/images/google-analytics.png"
+                          alt=""
+                          width={205}
+                          height={70}
+                        />
                       </li>
                       <li>
-                        <img src="images/chatgpt.png" alt="" />
+                        <Image
+                          src="/images/chatgpt.png"
+                          alt=""
+                          width={205}
+                          height={61}
+                        />
                       </li>
                       <li>
-                        <img src="images/semrush.png" alt="" />
+                        <Image
+                          src="/images/semrush.png"
+                          alt=""
+                          width={205}
+                          height={28}
+                        />
                       </li>
                       <li>
-                        <img src="images/reportingninja.png" alt="" />
+                        <Image
+                          src="/images/reportingninja.png"
+                          alt=""
+                          width={206}
+                          height={34}
+                        />
                       </li>
                     </ul>
                   </div>
@@ -575,9 +676,11 @@ export default function Services() {
                       <p>Industry Name</p>
                       <h3>Industry Name</h3>
                       <div className="client">
-                        <img
-                          src="images/gwebpro_client_inspire_paintings.svg"
+                        <Image
+                          src="/images/gwebpro_client_inspire_paintings.svg"
                           alt=""
+                          width={93}
+                          height={93}
                         />
                         <h3>Client Name</h3>
                       </div>
@@ -588,9 +691,11 @@ export default function Services() {
                       <p>Industry Name</p>
                       <h3>Industry Name</h3>
                       <div className="client">
-                        <img
-                          src="images/gwebpro_client_inspire_paintings.svg"
+                        <Image
+                          src="/images/gwebpro_client_inspire_paintings.svg"
                           alt=""
+                          width={93}
+                          height={93}
                         />
                         <h3>Client Name</h3>
                       </div>
@@ -601,9 +706,11 @@ export default function Services() {
                       <p>Industry Name</p>
                       <h3>Industry Name</h3>
                       <div className="client">
-                        <img
-                          src="images/gwebpro_client_inspire_paintings.svg"
+                        <Image
+                          src="/images/gwebpro_client_inspire_paintings.svg"
                           alt=""
+                          width={93}
+                          height={93}
                         />
                         <h3>Client Name</h3>
                       </div>
@@ -781,86 +888,86 @@ ImpactPrevArrow.propTypes = {
   style: PropTypes.object,
   onClick: PropTypes.func,
 };
-function ImpactSlider({ sliderRef }) {
-  const settings = {
-    dots: false,
-    arrows: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    variableWidth: true,
-    nextArrow: <ImpactNextArrow />,
-    prevArrow: <ImpactPrevArrow />,
-  };
-  return (
-    <>
-      <div className="controls">
-        <ImpactPrevArrow onClick={() => sliderRef.current.slickPrev()} />
-        <ImpactNextArrow onClick={() => sliderRef.current.slickNext()} />
-      </div>
-      <Slider {...settings} ref={sliderRef}>
-        <div>
-          <div className="impact-slider">
-            <img src="images/impact-slider-2.webp" alt="" />
-            <div className="content">
-              <div className="title">
-                <div className="icon">
-                  <img src="/images/blue-revenue.png" alt="" />
-                </div>
-                <h2>Monthly Reporting</h2>
-              </div>
-              <p>
-                Contrary to popular belief, Lorem Ipsum is not simply random
-                text. It has roots in a piece of classical Latin literature from
-                45 BC, making it over 2000 years old. Richard McClintock, a
-                Latin professor at Hampden-Sydney College in Virginia, looked up
-                one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in
-                classical literature, discovered the undoubtable source.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="impact-slider">
-            <img src="images/impact-slider-1.webp" alt="" />
-            <div className="content">
-              <div className="title">
-                <div className="icon">
-                  <img src="/images/blue-revenue.png" alt="" />
-                </div>
-                <h2>Monthly Reporting</h2>
-              </div>
-              <p>
-                Contrary to popular belief, Lorem Ipsum is not simply random
-                text. It has roots in a piece of classical Latin literature from
-                45 BC, making it over 2000 years old. Richard McClintock, a
-                Latin professor at Hampden-Sydney College in Virginia, looked up
-                one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in
-                classical literature, discovered the undoubtable source.
-              </p>
-            </div>
-          </div>
-        </div>
-      </Slider>
-    </>
-  );
-}
-ImpactSlider.propTypes = { sliderRef: PropTypes.object.isRequired };
-// const SwiperSlider = () => {
+// function ImpactSlider({ sliderRef }) {
+//   const settings = {
+//     dots: false,
+//     arrows: false,
+//     infinite: false,
+//     speed: 500,
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     variableWidth: true,
+//     nextArrow: <ImpactNextArrow />,
+//     prevArrow: <ImpactPrevArrow />,
+//   };
 //   return (
-//     <Swiper
-//       spaceBetween={50} // Space between slides in px
-//       slidesPerView={1} // Number of slides visible at a time
-//       onSlideChange={() => console.log("Slide changed")}
-//       onSwiper={(swiper) => console.log(swiper)}
-//     >
-//       <SwiperSlide>Slide 1</SwiperSlide>
-//       <SwiperSlide>Slide 2</SwiperSlide>
-//       <SwiperSlide>Slide 3</SwiperSlide>
-//       <SwiperSlide>Slide 4</SwiperSlide>
-//     </Swiper>
+//     <>
+//       <div className="controls">
+//         <ImpactPrevArrow onClick={() => sliderRef.current.slickPrev()} />
+//         <ImpactNextArrow onClick={() => sliderRef.current.slickNext()} />
+//       </div>
+//       <Slider {...settings} ref={sliderRef}>
+//         <div>
+//           <div className="impact-slider">
+//             <Image src="/images/impact-slider-2.webp" alt="" />
+//             <div className="content">
+//               <div className="title">
+//                 <div className="icon">
+//                   <Image src="/images/blue-revenue.png" alt="" />
+//                 </div>
+//                 <h2>Monthly Reporting</h2>
+//               </div>
+//               <p>
+//                 Contrary to popular belief, Lorem Ipsum is not simply random
+//                 text. It has roots in a piece of classical Latin literature from
+//                 45 BC, making it over 2000 years old. Richard McClintock, a
+//                 Latin professor at Hampden-Sydney College in Virginia, looked up
+//                 one of the more obscure Latin words, consectetur, from a Lorem
+//                 Ipsum passage, and going through the cites of the word in
+//                 classical literature, discovered the undoubtable source.
+//               </p>
+//             </div>
+//           </div>
+//         </div>
+//         <div>
+//           <div className="impact-slider">
+//             <Image src="/images/impact-slider-1.webp" alt="" />
+//             <div className="content">
+//               <div className="title">
+//                 <div className="icon">
+//                   <Image src="/images/blue-revenue.png" alt="" />
+//                 </div>
+//                 <h2>Monthly Reporting</h2>
+//               </div>
+//               <p>
+//                 Contrary to popular belief, Lorem Ipsum is not simply random
+//                 text. It has roots in a piece of classical Latin literature from
+//                 45 BC, making it over 2000 years old. Richard McClintock, a
+//                 Latin professor at Hampden-Sydney College in Virginia, looked up
+//                 one of the more obscure Latin words, consectetur, from a Lorem
+//                 Ipsum passage, and going through the cites of the word in
+//                 classical literature, discovered the undoubtable source.
+//               </p>
+//             </div>
+//           </div>
+//         </div>
+//       </Slider>
+//     </>
 //   );
-// };
+// }
+// ImpactSlider.propTypes = { sliderRef: PropTypes.object.isRequired };
+// // const SwiperSlider = () => {
+// //   return (
+// //     <Swiper
+// //       spaceBetween={50} // Space between slides in px
+// //       slidesPerView={1} // Number of slides visible at a time
+// //       onSlideChange={() => console.log("Slide changed")}
+// //       onSwiper={(swiper) => console.log(swiper)}
+// //     >
+// //       <SwiperSlide>Slide 1</SwiperSlide>
+// //       <SwiperSlide>Slide 2</SwiperSlide>
+// //       <SwiperSlide>Slide 3</SwiperSlide>
+// //       <SwiperSlide>Slide 4</SwiperSlide>
+// //     </Swiper>
+// //   );
+// // };
