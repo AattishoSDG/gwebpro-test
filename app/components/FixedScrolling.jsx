@@ -45,8 +45,9 @@ export default function FixedScrolling() {
     };
   }, []);
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(0);
   useEffect(() => {
+    setWindowWidth(window.innerWidth)
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };

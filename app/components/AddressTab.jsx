@@ -2,7 +2,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import DOMPurify from "dompurify"; // Import DOMPurify for sanitization
 import Slider from "react-slick";
-import apiService from "../services/apiService"; // Import the service
+import apiService from "../apiServices/apiService"; // Import the service
 
 const tabsData = [
   {

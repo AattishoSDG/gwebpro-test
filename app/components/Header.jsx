@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
 // import { Link, useLocation } from "react-router-dom";
 import { Logo, Menu, MenuClose } from "./SVG";
 
@@ -25,12 +26,14 @@ const Header = () => {
   // const handleMouseLeave = () => {
   //   document.body.classList.remove("no-scroll");
   // };
-  // useEffect(
-  //   function () {
-  //     setIsMobileMenuOpen(false);
-  //   },
-  //   [location]
-  // );
+  const pathname = usePathname(); // Gets current path (e.g., '/dashboard')
+  const searchParams = useSearchParams(); // Gets query params (URLSearchParams object)
+  useEffect(
+    function () {
+      setIsMobileMenuOpen(false);
+    },
+    [pathname, searchParams]
+  );
   function handleToggle(index) {
     if (activeIndex === index) setActiveIndex(null);
     else {

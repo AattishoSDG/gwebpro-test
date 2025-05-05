@@ -15,7 +15,7 @@ import BrandMarket from "./components/BrandMarket";
 import CustomCursor from "./components/CustomCursor";
 import { LogoGwebproLetterG } from "./components/SVG";
 
-import apiService from "./services/apiService"; // Import the service
+import apiService from "./apiServices/apiService"; // Import the service
 
 // import CheckMobile from "../components/CheckMobile";
 // Register the ScrollTrigger plugin

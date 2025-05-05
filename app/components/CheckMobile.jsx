@@ -1,9 +1,11 @@
+"use client"
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 export default function CheckMobile({ setWidth = 576, children }) {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(0);
   useEffect(() => {
+    setWindowWidth(window.innerWidth);
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
