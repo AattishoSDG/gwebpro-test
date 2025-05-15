@@ -24,7 +24,9 @@ export default function About() {
     } else {
       console.error("Video element not found.");
     }
-  }
+}
+
+ 
   return (
     <>
       <section className="services-banner inner-page-banner">

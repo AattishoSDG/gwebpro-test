@@ -38,10 +38,19 @@ const clientBg = {
 };
 
 const Home = async () => {
+  //fetch page data
   const data = await apiService.getPagedata("wp/v2/pages/8");
   const pageData = data.acf;
+
+  //fetch brands data
   const brdata = await apiService.getacfData("acf/v1/leader-brands/");
   const brandData = brdata;
+
+  //fetch address data
+  const addressdata = await apiService.getacfData("acf/v1/options/");
+  const addrsData = addressdata.address_list;
+
+ 
 
   // const sectionRef = useRef(null);
   // const pinColumnRef = useRef(null);
@@ -328,7 +337,7 @@ const Home = async () => {
 
       <section className="address_blk pad_cmn_blk">
         <div className="container">
-          <AddressTab />
+          <AddressTab  addressList= {addrsData}/>
         </div>
       </section>
     </>

@@ -3,8 +3,19 @@ import Image from "next/image";
 import AddressTab from "../components/AddressTab";
 import CheckScreenWidth from "../components/CheckScreenWidth";
 import NavLink from "../components/NavLink";
+import apiService from "../apiServices/apiService"; // Import the service
 
-export default function Contact() {
+export default async function Contact() {
+
+    //fetch address data
+    const settingsdata = await apiService.getacfData("acf/v1/options/");
+    const addrsData = settingsdata.address_list;
+    const socialData = settingsdata.social_site_list;
+
+     //fetch page data
+     const data = await apiService.getPagedata("wp/v2/pages/8");
+     const pageData = data.acf;
+
   return (
     <>
       <section className="services-banner inner-page-banner">
@@ -127,7 +138,7 @@ export default function Contact() {
       </section>
       <section className="address_blk contact-form-page pad_cmn_blk">
         <div className="container">
-          <AddressTab />
+          <AddressTab addressList= {addrsData}/>
         </div>
       </section>
       <section className="pad_cmn_blk">
@@ -196,6 +207,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
+       {pageData.banner_clutch_data ? (
       <section className="pad_cmn_blk contact-page">
         <div className="container">
           <div className="row">
@@ -212,43 +224,26 @@ export default function Contact() {
           <div className="row">
             <div className="col widgets-col">
               <div className="widgets-container">
-                <div className="widget">
+              { pageData.banner_clutch_data.map((item, i) => (
+                <div className="widget" key={i}>
                   <iframe
                     width="100%"
                     height="100%"
-                    src="https://shareables.clutch.co/share/badges/90882/125876?utm_source=clutch_top_company_badge&utm_medium=image_embed"
-                    title="Top Clutch Digital Marketing Company Food Beverage 2024"
+                    src={item.clutch_iframe_link}
+                    title={item.clutch_iframe_title}
                   ></iframe>
                 </div>
-                <div className="widget">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://shareables.clutch.co/share/badges/90882/11295?utm_source=clutch_top_company_badge&utm_medium=image_embed"
-                    title="Top Clutch Digital Marketing Company Government 2024"
-                  ></iframe>
-                </div>
-                <div className="widget">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://shareables.clutch.co/share/badges/90882/126826?utm_source=clutch_top_company_badge&utm_medium=image_embed"
-                    title="Top Clutch Seo Company Food Beverage 2024"
-                  ></iframe>
-                </div>
-                <div className="widget">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://shareables.clutch.co/share/badges/90882/59517?utm_source=clutch_top_company_badge&utm_medium=image_embed"
-                    title="Top Clutch Ppc Company Government 2024"
-                  ></iframe>
-                </div>
+                ))
+              }
+
               </div>
             </div>
           </div>
         </div>
       </section>
+      ) : (
+                  <span></span>
+                )}
     </>
   );
 }

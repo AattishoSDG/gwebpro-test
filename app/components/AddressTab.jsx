@@ -52,7 +52,8 @@ const tabsData = [
   },
 ];
 
-const AddressTab = () => {
+const AddressTab = ({addressList}) => {
+ 
   // State to track the active tab
   const [activeTab, setActiveTab] = useState(0);
 
@@ -62,9 +63,9 @@ const AddressTab = () => {
   };
 
   // Helper function to sanitize HTML
-  const sanitizeHTML = (html) => {
-    return DOMPurify.sanitize(html);
-  };
+  // const sanitizeHTML = (html) => {
+  //   return DOMPurify.sanitize(html);
+  // };
 
   const settings = {
     dots: false,
@@ -75,29 +76,14 @@ const AddressTab = () => {
     variableWidth: true,
   };
 
-  const [addressData, setAddress] = useState([]);
 
-  // Fetch address data on component mount
-  useEffect(() => {
-    get_addressData();
-  }, []);
-
-  const get_addressData = async () => {
-    try {
-      const addrdata = await apiService.getacfData("acf/v1/options/");
-      setAddress(addrdata.address_list);
-    } catch (error) {
-      console.error("Error fetching posts", error);
-    }
-  };
-
-  if (addressData) {
+  if (addressList) {
     return (
       <>
         <div className="d-lg-flex d-none row add-tabs-container">
           <div className="col-md-7 col-lg-6 address_card">
             <ul>
-              {addressData.map((tab, i) => (
+              {addressList.map((tab, i) => (
                 <li
                   key={i}
                   className={activeTab === i ? "active" : ""}
@@ -111,7 +97,7 @@ const AddressTab = () => {
                     {/* Render sanitized HTML content */}
                     <p
                       dangerouslySetInnerHTML={{
-                        __html: sanitizeHTML(tab.address_location),
+                        __html: tab.address_location,
                       }}
                     ></p>
                     <a
@@ -133,7 +119,7 @@ const AddressTab = () => {
           </div>
 
           <div className="col-md-5 col-lg-6 tabContent">
-            {addressData.map((data, i) => (
+            {addressList.map((data, i) => (
               <div
                 className={`desc ${activeTab === i ? "active" : ""}`}
                 key={i}
@@ -150,7 +136,7 @@ const AddressTab = () => {
             <div className="col address_card">
               <ul>
                 <Slider {...settings}>
-                  {addressData.map((tab, i) => (
+                  {addressList.map((tab, i) => (
                     <div key={i}>
                       <li
                         className={`${activeTab === i ? "active" : ""}`}
@@ -164,7 +150,7 @@ const AddressTab = () => {
                           {/* Render sanitized HTML content */}
                           <p
                             dangerouslySetInnerHTML={{
-                              __html: sanitizeHTML(tab.address_location),
+                              __html:tab.address_location,
                             }}
                           ></p>
                           <a
