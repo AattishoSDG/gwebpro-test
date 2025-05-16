@@ -631,6 +631,7 @@ const Header = () => {
                       <div>
                         <Link href="/about">About Us</Link>
                       </div>
+                      <span></span>
                     </div>
                     <div className={`collapsible`}>
                       <div className="hidden">

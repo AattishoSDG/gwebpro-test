@@ -6,15 +6,14 @@ import NavLink from "../components/NavLink";
 import apiService from "../apiServices/apiService"; // Import the service
 
 export default async function Contact() {
+  //fetch address data
+  const settingsdata = await apiService.getacfData("acf/v1/options/");
+  const addrsData = settingsdata.address_list;
+  const socialData = settingsdata.social_site_list;
 
-    //fetch address data
-    const settingsdata = await apiService.getacfData("acf/v1/options/");
-    const addrsData = settingsdata.address_list;
-    const socialData = settingsdata.social_site_list;
-
-     //fetch page data
-     const data = await apiService.getPagedata("wp/v2/pages/8");
-     const pageData = data.acf;
+  //fetch page data
+  const data = await apiService.getPagedata("wp/v2/pages/8");
+  const pageData = data.acf;
 
   return (
     <>
@@ -138,7 +137,7 @@ export default async function Contact() {
       </section>
       <section className="address_blk contact-form-page pad_cmn_blk">
         <div className="container">
-          <AddressTab addressList= {addrsData}/>
+          <AddressTab addressList={addrsData} />
         </div>
       </section>
       <section className="pad_cmn_blk">
@@ -207,43 +206,42 @@ export default async function Contact() {
           </div>
         </div>
       </section>
-       {pageData.banner_clutch_data ? (
-      <section className="pad_cmn_blk contact-page">
-        <div className="container">
-          <div className="row">
-            <div className="col">
-              <div className="title_blk text-center">
-                <h2>The Leader In Digital Marketing</h2>
-                <p>
-                  The top-rated software and digital marketing firm in the
-                  Canada, with more than 200 five-star reviews from past clients
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col widgets-col">
-              <div className="widgets-container">
-              { pageData.banner_clutch_data.map((item, i) => (
-                <div className="widget" key={i}>
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src={item.clutch_iframe_link}
-                    title={item.clutch_iframe_title}
-                  ></iframe>
+      {pageData.banner_clutch_data ? (
+        <section className="pad_cmn_blk contact-page">
+          <div className="container">
+            <div className="row">
+              <div className="col">
+                <div className="title_blk text-center">
+                  <h2>The Leader In Digital Marketing</h2>
+                  <p>
+                    The top-rated software and digital marketing firm in the
+                    Canada, with more than 200 five-star reviews from past
+                    clients
+                  </p>
                 </div>
-                ))
-              }
-
+              </div>
+            </div>
+            <div className="row">
+              <div className="col widgets-col">
+                <div className="widgets-container">
+                  {pageData.banner_clutch_data.map((item, i) => (
+                    <div className="widget" key={i}>
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src={item.clutch_iframe_link}
+                        title={item.clutch_iframe_title}
+                      ></iframe>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       ) : (
-                  <span></span>
-                )}
+        <span></span>
+      )}
     </>
   );
 }

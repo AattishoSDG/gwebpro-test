@@ -1,32 +1,33 @@
-"use client";
-import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import BrandMarket from "../components/BrandMarket";
-import CheckScreenWidth from "../components/CheckScreenWidth";
-import { LogoGwebproLetterG } from "../components/SVG";
+// "use client";
+// import { useRef, useState } from "react";
+
 import CheckMobile from "../components/CheckMobile";
-import { Swiper, SwiperSlide } from "swiper/react";
+import CheckScreenWidth from "../components/CheckScreenWidth";
+import BrandMarket from "../components/BrandMarket";
+import { LogoGwebproLetterG } from "../components/SVG";
+import SectionPromiseSlider from "./SectionPromiseSlider";
+import AboutPageVideoPlayer from "./VideoPlayer";
 
 export default function About() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const videoRef = useRef(null); // Reference to the video element
-  function handlePlay(e) {
-    // console.log(e);
-    // videoRef.current.play();
-    // setIsPlaying(true);
-    e.preventDefault();
-    if (videoRef.current) {
-      // Check if videoRef.current exists
-      videoRef.current.play();
-      setIsPlaying(true);
-    } else {
-      console.error("Video element not found.");
-    }
-}
+  // const [isPlaying, setIsPlaying] = useState(false);
+  // const videoRef = useRef(null); // Reference to the video element
+  // function handlePlay(e) {
+  //   // console.log(e);
+  //   // videoRef.current.play();
+  //   // setIsPlaying(true);
+  //   e.preventDefault();
+  //   if (videoRef.current) {
+  //     // Check if videoRef.current exists
+  //     videoRef.current.play();
+  //     setIsPlaying(true);
+  //   } else {
+  //     console.error("Video element not found.");
+  //   }
+  // }
 
- 
   return (
     <>
       <section className="services-banner inner-page-banner">
@@ -137,22 +138,24 @@ export default function About() {
         <div className="container">
           <div className="row align-items-center gx-md-3 gx-lg-4 gx-xl-5 gy-4">
             <div className="col-lg-5">
-              <div className="video-container" onClick={handlePlay}>
-                {!isPlaying && (
+              <div className="video-container">
+                {/* onClick={handlePlay} */}
+                {/* {!isPlaying && (
                   <Image
                     src="/images/video_play_btn_blue.svg"
                     alt=""
                     width={85}
                     height={85}
                   />
-                )}
-                <video
+                )} */}
+                {/* <video
                   src="/images/sample-video.mp4"
                   poster="/images/video_poster.png"
                   preload="none"
-                  controls={isPlaying}
-                  ref={videoRef}
-                ></video>
+                  // controls={isPlaying}
+                  // ref={videoRef}
+                ></video> */}
+                <AboutPageVideoPlayer />
               </div>
             </div>
             <div className="col-lg-7">
@@ -365,7 +368,7 @@ export default function About() {
             </div>
           </CheckScreenWidth>
           <CheckMobile setWidth={992}>
-            <div className="row">
+            {/* <div className="row">
               <div className="col swiper-slider-promise">
                 <Swiper slidesPerView={"auto"}>
                   <SwiperSlide>
@@ -427,7 +430,8 @@ export default function About() {
                   </SwiperSlide>
                 </Swiper>
               </div>
-            </div>
+            </div> */}
+            <SectionPromiseSlider />
           </CheckMobile>
         </div>
       </section>

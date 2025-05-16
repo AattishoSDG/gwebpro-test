@@ -1,9 +1,15 @@
-@import url("bootstrap.min.css"); @import url("fontawesome.min.css"); @import url("regular.css"); @import url("brands.css"); * { box-sizing: border-box; }
+/* Slick Slider core styles */
+@import "slick-carousel/slick/slick.css"; /* Slick Slider theme styles (optional, for default arrows/dots styling) */
+@import "slick-carousel/slick/slick-theme.css"; /* Swiper core styles */
+@import "swiper/css"; /* Swiper navigation styles (if you use navigation arrows) */
+@import "swiper/css/navigation"; /* Swiper pagination styles (if you use pagination dots) */
+@import "swiper/css/pagination"; /* Swiper scrollbar styles (if you use scrollbars) */
+@import "swiper/css/scrollbar"; @import url("bootstrap.min.css"); @import url("fontawesome.min.css"); @import url("regular.css"); @import url("brands.css"); * { box-sizing: border-box; }
 :root { --main_color: #038aba; /*--main_font: "DM Sans", sans-serif; --secondary-font:  "Exo", sans-serif; */ --z-index-menu-fixed: 999; --height-menu-fixed-wrapper: 100px; }
 body { padding: 0 0 0 0; margin: 0 0 0 0; font-size: 16px; font-family: var(--main_font); color: #000; padding-top: var(--height-menu-fixed-wrapper); }
 body.no-scroll { overflow: hidden; }
 ul { margin: 0; padding: 0; list-style: none; }
-img { max-width: 100%; }
+img { max-width: 100%; height: auto; }
 a { transition: 0.3s ease-in-out; text-decoration: none; }
 /* .container { max-width: 1352px; }
 */

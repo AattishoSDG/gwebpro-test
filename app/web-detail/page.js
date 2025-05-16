@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import CheckMobile from "../components/CheckMobile";
 import CheckScreenWidth from "../components/CheckScreenWidth";

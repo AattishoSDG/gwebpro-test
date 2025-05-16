@@ -408,7 +408,7 @@ form button { padding: 16px 20px; font-size: 17px; }
 .section-impact ul li { padding-left: 16px; padding-right: 16px; }
 .section-impact ul li h4 { font-size: 40px; line-height: 42px; margin-bottom: 8px; }
 .card-you_get .title { font-size: 24px; line-height: 28px; }
-.card-you_get { max-width: 298px; padding: 24px; }
+.card-you_get { width: 298px; padding: 24px; }
 .gwebpro-logo { max-width: 400px; min-height: 275px; margin-left: auto; margin-right: auto; }
 .gwebpro-logo svg { max-width: 50%; }
 .about_page .title_blk { text-align: center; }
@@ -577,7 +577,7 @@ form button { font-size: 16px; padding: 12px 16px; }
 .impact-slider { max-width: 100%; width: 100%; }
 .section-impact-slider .swiper-slide { max-width: 85%; width: 85% !important; }
 .impact-slider .content { padding: 28px 20px 20px 20px; left: 16px; right: 60px; width: auto; }
-.card-you_get { max-width: 298px; }
+.card-you_get { width: 298px; }
 .services-cta h2 { font-size: 32px; line-height: 36px; margin-bottom: 24px; }
 .gwebpro-logo { max-width: 360px; min-height: 224px; }
 .google-ranking .title_blk { text-align: center; }
@@ -733,7 +733,7 @@ form button { font-size: 16px; padding: 12px 16px; }
 .section-sticky { top: 0; padding: 0; }
 .sticky-nav ul li a { line-height: 1; font-size: 12px; }
 .section-impact-slider .controls { display: none; }
-.card-you_get { max-width: 298px; }
+.card-you_get { width: 298px; }
 .gwebpro-logo { max-width: 341px; min-height: 224px; }
 .gwebpro-logo svg { max-width: 50%; }
 .about_director .video-container { max-width: 341px; max-height: 240px; margin-right: auto; margin-left: auto; }
@@ -741,7 +741,7 @@ form button { font-size: 16px; padding: 12px 16px; }
 .accomplishments { gap: 10px; border-radius: 20px; padding: 16px; flex-wrap: wrap; }
 .accomplishments .img { padding: 8px 12px; border-radius: 16px; width: 48%; }
 .accomplishments .img:nth-child(2) { order: 100; width: 100%; }
-.section-promise .card-you_get { max-width: 308px; }
+.section-promise .card-you_get { width: 308px; }
 .section-promise .card-you_get .text { font-size: 12px; line-height: 24px; }
 .section-promise .card-you_get .icon { width: 72px; height: 72px; }
 .about-partners { background-color: rgba(29, 35, 44, 0.04); }
