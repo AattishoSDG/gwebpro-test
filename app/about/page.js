@@ -11,7 +11,9 @@ import { LogoGwebproLetterG } from "../components/SVG";
 import SectionPromiseSlider from "./SectionPromiseSlider";
 import AboutPageVideoPlayer from "./VideoPlayer";
 
-export default function About() {
+import apiService from "../apiServices/apiService"; // Import the service
+
+export default async function About() {
   // const [isPlaying, setIsPlaying] = useState(false);
   // const videoRef = useRef(null); // Reference to the video element
   // function handlePlay(e) {
@@ -28,6 +30,10 @@ export default function About() {
   //   }
   // }
 
+  //fetch page data
+  const data = await apiService.getPagedata("wp/v2/pages/133");
+  const pageData = data.acf;
+
   return (
     <>
       <section className="services-banner inner-page-banner">
@@ -36,15 +42,16 @@ export default function About() {
             <div className="col text-center">
               <div className="banner-content">
                 <div className="position-relative title_blk">
-                  <h1>
-                    <span>About </span>
-                    <br /> GWebPro Marketing Inc.
+                  <h1  dangerouslySetInnerHTML={{
+                        __html: pageData.about_banner_title,
+                      }}>
+                   
                   </h1>
                 </div>
                 <CheckScreenWidth setWidth={991}>
                   <div className="video-container">
                     <video
-                      src="/images/services-banner.mp4"
+                      src={pageData.banner_bg_video}
                       autoPlay
                       muted
                       loop
@@ -64,7 +71,7 @@ export default function About() {
             <div className="col-lg-5">
               <div className="gwebpro-logo">
                 <video
-                  src="/images/logo-bg-compressed.mp4"
+                  src={pageData.logo_bg_video}
                   autoPlay
                   muted
                   loop
@@ -75,25 +82,17 @@ export default function About() {
             {/* </CheckScreenWidth> */}
             <div className="col-lg-6 offset-xl-1">
               <div className="title_blk">
-                <h2>
-                  We’re a leader in tech-enabled digital marketing solutions
+                <h2 dangerouslySetInnerHTML={{
+                        __html: pageData.about_section_title,
+                      }}>
+                  
                 </h2>
               </div>
               <div className="title_blk">
-                <p>
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature
-                  from 45 BC, making it over 2000 years old. Richard McClintock,
-                  a Latin professor at Hampden-Sydney College in Virginia,
-                  looked up one of the more obscure Latin words, consectetur,
-                  from a Lorem Ipsum passage, and going through the cites of the
-                  word in classical literature, discovered the undoubtable
-                  source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of
-                  &quot;de Finibus Bonorum et Malorum&quot; (The Extremes of
-                  Good and Evil) by Cicero, written in 45 BC. This book is a
-                  treatise on the theory of ethics, very popular during the
-                  Renaissance. The first line of Lorem Ipsum, &quot;Lorem ipsum
-                  dolor sit amet..&quot;, comes from a line in section 1.10.32.
+                <p dangerouslySetInnerHTML={{
+                        __html: pageData.about_section_content,
+                      }}>
+                 
                 </p>
               </div>
             </div>
@@ -106,27 +105,29 @@ export default function About() {
             <div className="col-md-6">
               <div className="title_blk">
                 <div className="img">
-                  <Image
-                    src="/images/google-ranking.png"
-                    alt=""
+                  <img
+                    src={pageData.google_ranking_logo.url}
+                    alt={pageData.google_ranking_logo.alt}
                     width={241}
                     height={105}
                   />
                 </div>
-                <h2>
-                  We’ve Driven Over
-                  <br />
-                  1,312,500
+                <h2 dangerouslySetInnerHTML={{
+                        __html: pageData.google_ranking_title,
+                      }}>
+                 
                 </h2>
-                <p>
-                  Page <span>1 Rankings on Google</span> for our clients
+                <p dangerouslySetInnerHTML={{
+                        __html: pageData.google_ranking_description,
+                      }}>
+                 
                 </p>
               </div>
             </div>
             <div className="col-md-6">
-              <Image
-                src="/images/google-ranking-left.png"
-                alt=""
+              <img
+                src={pageData.right_side_image.url}
+                alt={pageData.right_side_image.alt}
                 width={793}
                 height={411}
               />
@@ -155,19 +156,19 @@ export default function About() {
                   // controls={isPlaying}
                   // ref={videoRef}
                 ></video> */}
-                <AboutPageVideoPlayer />
+                <AboutPageVideoPlayer goal_video_thumbnail={pageData.goal_video_thumbnail} goal_video={pageData.goal_video}/>
               </div>
             </div>
             <div className="col-lg-7">
               <div className="title_blk">
-                <h2>The Goal Of</h2>
-                <Image
-                  src="/images/gwebpro_logo.png"
-                  alt=""
+                <h2>{pageData.heading_line_1}</h2>
+                <img
+                  src={pageData.goal_logo.url}
+                  alt={pageData.goal_logo.alt}
                   width={345}
                   height={97}
                 />
-                <h2>From The Mouth Of Our Director</h2>
+                <h2>{pageData.heading_line_2}</h2>
               </div>
             </div>
           </div>
@@ -178,15 +179,14 @@ export default function About() {
           <div className="row">
             <div className="col">
               <div className="title_blk has-btn-grp has-dark-bg">
-                <h2>We keep the focus on driving results.</h2>
-                <p>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don&apos;t
-                  look even slightly believable.
+                <h2>{pageData.focus_title}</h2>
+                <p dangerouslySetInnerHTML={{
+                        __html: pageData.focus_description,
+                      }}>
+                 
                 </p>
-                <Link href="/">Portfolio</Link>
-                <Link href="/">Get In Touch</Link>
+                <Link href={pageData.focus_button_1_link}>{pageData.focus_button_1_title}</Link>
+                <Link href={pageData.focus_button_2_link}>{pageData.focus_button_2_title}</Link>
               </div>
               {/* <div className="btn-group"></div> */}
             </div>
@@ -198,29 +198,29 @@ export default function About() {
           <div className="row">
             <div className="col-md-6">
               <div className="title_blk">
-                <h2>
-                  How Did <br />
-                  Ignite Visibility Start?
+                <h2 dangerouslySetInnerHTML={{
+                        __html: pageData.left_side_title,
+                      }}>
+                 
                 </h2>
-                <p>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don&apos;t
-                  look even slightly believable.
+                <p dangerouslySetInnerHTML={{
+                        __html: pageData.left_side_content,
+                      }}>
+                 
                 </p>
               </div>
             </div>
             <div className="col-md-6">
               <div className="title_blk">
-                <h2>
-                  Over The Years <br />
-                  We Have Acomplished
+                <h2 dangerouslySetInnerHTML={{
+                        __html: pageData.right_side_title,
+                      }}>
+                 
                 </h2>
-                <p>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don&apos;t
-                  look even slightly believable.
+                <p dangerouslySetInnerHTML={{
+                        __html: pageData.right_side_content,
+                      }}>
+                
                 </p>
               </div>
             </div>
@@ -228,30 +228,18 @@ export default function About() {
           <div className="row">
             <div className="col">
               <div className="accomplishments">
-                <div className="img">
-                  <Image
-                    src="/images/google-partners.png"
-                    alt=""
+              
+               {pageData.partner_logo_list.map((tab, i) => (
+                <div className="img" key={i}>
+                  <img
+                    src={tab.partner_logo.url}
+                    alt={tab.partner_logo.alt}
                     width={167}
                     height={134}
                   />
                 </div>
-                <div className="img">
-                  <Image
-                    src="/images/google-streetview.png"
-                    alt=""
-                    width={327}
-                    height={135}
-                  />
-                </div>
-                <div className="img">
-                  <Image
-                    src="/images/gwebpro-semrush.png"
-                    alt=""
-                    width={129}
-                    height={131}
-                  />
-                </div>
+                ))}
+               
               </div>
             </div>
           </div>
@@ -262,8 +250,8 @@ export default function About() {
           <div className="row">
             <div className="col-md-5">
               <div className="floating-img">
-                <Image
-                  src="/images/jas-saran-industry-leadership.png"
+                <img
+                  src={pageData.photo_bdm}
                   alt=""
                   width={622}
                   height={696}
@@ -272,29 +260,18 @@ export default function About() {
             </div>
             <div className="col-md-7">
               <div className="title_blk">
-                <h2>
-                  Industry <br />
-                  Expert Leadership
+                <h2  dangerouslySetInnerHTML={{
+                        __html: pageData.title_bdm,
+                      }}>
                 </h2>
               </div>
-              <div className="title_blk">
-                <p>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don&apos;t
-                  look even slightly believable. If you are going to use a
-                  passage of Lorem Ipsum, you need to be sure there isn&apos;t
-                  anything embarrassing hidden in the middle of text.
+              <div className="title_blk" d>
+                <p dangerouslySetInnerHTML={{
+                        __html: pageData.description_bdm,
+                      }}>
+                  
                 </p>
-                <p>
-                  All the Lorem Ipsum generators on the Internet tend to repeat
-                  predefined chunks as necessary, making this the first true
-                  generator on the Internet. It uses a dictionary of over 200
-                  Latin words, combined with a handful of model sentence
-                  structures, to generate Lorem Ipsum which looks reasonable.
-                  The generated Lorem Ipsum is therefore always free from
-                  repetition, injected humour, or non-characteristic words etc.
-                </p>
+                
               </div>
             </div>
           </div>

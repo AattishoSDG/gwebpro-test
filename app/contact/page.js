@@ -5,15 +5,25 @@ import CheckScreenWidth from "../components/CheckScreenWidth";
 import NavLink from "../components/NavLink";
 import apiService from "../apiServices/apiService"; // Import the service
 
-export default async function Contact() {
+export default async function Contact(){
   //fetch address data
   const settingsdata = await apiService.getacfData("acf/v1/options/");
   const addrsData = settingsdata.address_list;
   const socialData = settingsdata.social_site_list;
+  const phone_number_title = settingsdata.phone_number_title;
+  const phone_number = settingsdata.phone_number;
+  const email_address_title = settingsdata.email_address_title;
+  const email_address = settingsdata.email_address;
 
   //fetch page data
   const data = await apiService.getPagedata("wp/v2/pages/8");
   const pageData = data.acf;
+
+  //fetch contact page data
+  const ContactPagedata = await apiService.getPagedata("wp/v2/pages/259");
+  const contact_pagedata = ContactPagedata.acf;
+
+
 
   return (
     <>
@@ -24,14 +34,14 @@ export default async function Contact() {
               <div className="banner-content">
                 <div className="position-relative contact-page-banner">
                   <h1>
-                    Contact G Web Pro Marketing Inc. <br />{" "}
-                    <span>Let’s start a project together.</span>
+                    {contact_pagedata.banner_title} <br />{" "}
+                    <span> {contact_pagedata.banner_description}</span>
                   </h1>
                 </div>
                 <CheckScreenWidth setWidth={991}>
                   <div className="video-container">
                     <video
-                      src="images/services-banner.mp4"
+                      src={contact_pagedata.banner_video}
                       autoPlay
                       muted
                       loop
@@ -52,10 +62,9 @@ export default async function Contact() {
           <div className="row">
             <div className="col">
               <div className="contact-form-title">
-                <h2>Meet your dedicated product team</h2>
+                <h2>{contact_pagedata.contact_form_title}</h2>
                 <p>
-                  Lorem Ipsum has been the industry&apos;s standard dummy text
-                  ever since the 1500s.
+                  {contact_pagedata.contact_form_details}
                 </p>
               </div>
             </div>
@@ -155,8 +164,8 @@ export default async function Contact() {
                     />
                   </div>
                   <div className="text">
-                    <p>Connect With Us On Call</p>
-                    <Link href="tel:1-888-445-3334">1-888-445-3334</Link>
+                    <p>{phone_number_title}</p>
+                    <Link href={`tel:${phone_number}`}>{phone_number}</Link>
                   </div>
                 </div>
                 <div>
@@ -169,39 +178,45 @@ export default async function Contact() {
                     />
                   </div>
                   <div className="text">
-                    <p>Connect With Us Via Email</p>
-                    <Link href="mailto:info@samplemail.com">
-                      info@samplemail.com
+                    <p>{email_address_title}</p>
+                    <Link href={`mailto:${email_address}`}>
+                     {email_address}
                     </Link>
                   </div>
                 </div>
               </div>
-              <div className="socials_blk">
+             {socialData ? (
+                 <div className="socials_blk">
                 <div>
-                  <p>Connect On Our Socials</p>
+                  <p>{contact_pagedata.social_media_section_title}</p>
                 </div>
                 <div>
-                  <Link href="/">
+                  <Link href={socialData[0].social_site_link} target="_blank">
                     <i className="fa-brands fa-facebook-f"></i>
                   </Link>
 
-                  <Link href="/">
+                  <Link href={socialData[1].social_site_link} target="_blank">
                     <i className="fa-brands fa-x-twitter"></i>
                   </Link>
 
-                  <Link href="/">
+                  <Link href={socialData[2].social_site_link} target="_blank">
                     <i className="fa-brands fa-linkedin-in"></i>
                   </Link>
 
-                  <Link href="/">
+                  <Link href={socialData[3].social_site_link} target="_blank">
                     <i className="fa-brands fa-pinterest-p"></i>
                   </Link>
 
-                  <Link href="/">
+                  <Link href={socialData[4].social_site_link} target="_blank">
                     <i className="fa-brands fa-youtube"></i>
                   </Link>
                 </div>
               </div>
+                
+              ) : (
+        <span></span>
+      )}
+             
             </div>
           </div>
         </div>
@@ -212,11 +227,9 @@ export default async function Contact() {
             <div className="row">
               <div className="col">
                 <div className="title_blk text-center">
-                  <h2>The Leader In Digital Marketing</h2>
+                  <h2>{contact_pagedata.clutch_section_title}</h2>
                   <p>
-                    The top-rated software and digital marketing firm in the
-                    Canada, with more than 200 five-star reviews from past
-                    clients
+                    {contact_pagedata.clutch_section_description}
                   </p>
                 </div>
               </div>

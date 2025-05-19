@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 
-export default function AboutPageVideoPlayer() {
+export default function AboutPageVideoPlayer({ goal_video_thumbnail, goal_video }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
 
@@ -18,7 +18,7 @@ export default function AboutPageVideoPlayer() {
   return (
     <div className="about-page-video-container" onClick={handlePlay}>
       {!isPlaying && (
-        <Image
+        <img
           src="/images/video_play_btn_blue.svg"
           alt="Play video"
           width={85}
@@ -27,8 +27,8 @@ export default function AboutPageVideoPlayer() {
         />
       )}
       <video
-        src="/images/sample-video.mp4" // About page specific video
-        poster="/images/video_poster.png" // About page specific poster
+        src={goal_video} // About page specific video
+        poster={goal_video_thumbnail.url} // About page specific poster
         preload="none"
         controls={isPlaying}
         ref={videoRef}
