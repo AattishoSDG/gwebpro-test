@@ -8,7 +8,12 @@ export default async function Portfolio() {
   //fetch brands data
   const brdata = await apiService.getacfData("acf/v1/leader-brands/");
   const brandData = brdata;
-  console.log(brandData.brand_logo_list);
+
+  //fetch page data
+  const data = await apiService.getPagedata("wp/v2/pages/607");
+  const pageData = data.acf;
+  
+
   return (
     <>
       <section className="services-banner inner-page-banner">
@@ -17,22 +22,21 @@ export default async function Portfolio() {
             <div className="col text-center">
               <div className="banner-content">
                 <div className="position-relative title_blk">
-                  <h1>
-                    Our Latest <span>Work</span>
+                  <h1 dangerouslySetInnerHTML={{
+                        __html: pageData.banner_title,
+                      }}>
+                  
                   </h1>
-                  <p>
-                    Our goal is to nurture your vision and provide innovative,
-                    custom solutions for all your marketing needs. At GWebPro
-                    Marketing Inc, we understand the value of your brand. We
-                    provide a range of customized services including branding,
-                    website design & development, marketing consultation, SEO,
-                    and more.
-                  </p>
+                  <div dangerouslySetInnerHTML={{
+                        __html: pageData.banner_description,
+                      }}>
+                   
+                  </div>
                 </div>
                 <CheckScreenWidth setWidth={991}>
                   <div className="video-container">
                     <video
-                      src="images/services-banner.mp4"
+                      src={pageData.banner_video}
                       autoPlay
                       muted
                       loop

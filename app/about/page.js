@@ -42,11 +42,10 @@ export default async function About() {
             <div className="col text-center">
               <div className="banner-content">
                 <div className="position-relative title_blk">
-                  <h1  dangerouslySetInnerHTML={{
+                  <h1 dangerouslySetInnerHTML={{
                         __html: pageData.about_banner_title,
                       }}>
-                   
-                  </h1>
+                   </h1>
                 </div>
                 <CheckScreenWidth setWidth={991}>
                   <div className="video-container">
@@ -92,7 +91,6 @@ export default async function About() {
                 <p dangerouslySetInnerHTML={{
                         __html: pageData.about_section_content,
                       }}>
-                 
                 </p>
               </div>
             </div>
@@ -105,7 +103,7 @@ export default async function About() {
             <div className="col-md-6">
               <div className="title_blk">
                 <div className="img">
-                  <img
+                  <Image
                     src={pageData.google_ranking_logo.url}
                     alt={pageData.google_ranking_logo.alt}
                     width={241}
@@ -125,7 +123,7 @@ export default async function About() {
               </div>
             </div>
             <div className="col-md-6">
-              <img
+              <Image
                 src={pageData.right_side_image.url}
                 alt={pageData.right_side_image.alt}
                 width={793}
@@ -162,7 +160,7 @@ export default async function About() {
             <div className="col-lg-7">
               <div className="title_blk">
                 <h2>{pageData.heading_line_1}</h2>
-                <img
+                <Image
                   src={pageData.goal_logo.url}
                   alt={pageData.goal_logo.alt}
                   width={345}
@@ -231,7 +229,7 @@ export default async function About() {
               
                {pageData.partner_logo_list.map((tab, i) => (
                 <div className="img" key={i}>
-                  <img
+                  <Image
                     src={tab.partner_logo.url}
                     alt={tab.partner_logo.alt}
                     width={167}
@@ -250,7 +248,7 @@ export default async function About() {
           <div className="row">
             <div className="col-md-5">
               <div className="floating-img">
-                <img
+                <Image
                   src={pageData.photo_bdm}
                   alt=""
                   width={622}
@@ -265,12 +263,10 @@ export default async function About() {
                       }}>
                 </h2>
               </div>
-              <div className="title_blk" d>
-                <p dangerouslySetInnerHTML={{
+              <div className="title_blk" dangerouslySetInnerHTML={{
                         __html: pageData.description_bdm,
                       }}>
-                  
-                </p>
+                
                 
               </div>
             </div>
@@ -282,66 +278,32 @@ export default async function About() {
           <div className="row">
             <div className="col">
               <div className="title_blk center text-center">
-                <h2>Our Promise</h2>
+                <h2>{pageData.our_promise_heading}</h2>
               </div>
             </div>
           </div>
           <CheckScreenWidth setWidth={991}>
             <div className="row gy-4">
-              <div className="col-md-6 col-lg-4">
+
+            {pageData.promise_repeater.map((item, k) => (
+              <div className="col-md-6 col-lg-4" key={k}>
                 <div className="card-you_get">
                   <div className="icon">
                     <Image
-                      src="/images/workstation_yellow.png"
+                      src={item.promise_icon.url}
                       width={84}
                       height={84}
-                      alt=""
+                      alt={item.promise_icon.alt}
                     />
                   </div>
-                  <p className="title">Results</p>
+                  <p className="title">{item.promise_title}</p>
                   <p className="text">
-                    Lorem Ipsum has been the industry&apos;s standard dummy text
-                    ever since the 1500s, when an unknown printer took a galley
-                    of type and scrambled it to make a type specimen book.
+                    {item.promise_description}
                   </p>
                 </div>
               </div>
-              <div className="col-md-6 col-lg-4">
-                <div className="card-you_get">
-                  <div className="icon">
-                    <Image
-                      src="/images/workstation_green.png"
-                      width={84}
-                      height={84}
-                      alt=""
-                    />
-                  </div>
-                  <p className="title">Results</p>
-                  <p className="text">
-                    Lorem Ipsum has been the industry&apos;s standard dummy text
-                    ever since the 1500s, when an unknown printer took a galley
-                    of type and scrambled it to make a type specimen book.{" "}
-                  </p>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-4">
-                <div className="card-you_get">
-                  <div className="icon">
-                    <Image
-                      src="/images/workstation_purple.png"
-                      width={84}
-                      height={84}
-                      alt=""
-                    />
-                  </div>
-                  <p className="title">Results</p>
-                  <p className="text">
-                    Lorem Ipsum has been the industry&apos;s standard dummy text
-                    ever since the 1500s, when an unknown printer took a galley
-                    of type and scrambled it to make a type specimen book.
-                  </p>
-                </div>
-              </div>
+               ))}
+
             </div>
           </CheckScreenWidth>
           <CheckMobile setWidth={992}>
@@ -423,13 +385,16 @@ export default async function About() {
           <div className="row">
             <div className="col featured-in-col">
               <div className="title_blk text-center">
-                <h2>We’ve Been Featured In</h2>
+                <h2>{pageData.featured_in_heading}</h2>
               </div>
               <div className="featured-in-brands">
-                <div className="brand-logo">
-                  <Image src="/images/inc.png" alt="" width={96} height={35} />
+              {pageData.featured_in_repeater.map((row, l) => (
+                <div className="brand-logo" key={l}>
+                  <Image src={row.logo_featured_id.url} alt={row.logo_featured_id.alt} width={96} height={35} />
                 </div>
-                <div className="brand-logo">
+                 ))}
+
+                {/* <div className="brand-logo">
                   <Image
                     src="/images/huffington-post.png"
                     alt=""
@@ -476,7 +441,9 @@ export default async function About() {
                     width={182}
                     height={28}
                   />
-                </div>
+                </div> */}
+
+
               </div>
             </div>
           </div>
@@ -487,8 +454,8 @@ export default async function About() {
           <div className="row">
             <div className="col has-btn-grp has-btn-single">
               <p>Service With US</p>
-              <h2>Enhance Your Business With Our Services</h2>
-              <Link href="/">Consult With Our Experts</Link>
+              <h2>{pageData.heading_service_with}</h2>
+              <Link href={pageData.button_link_service_with} target="_blank">{pageData.button_title_service_with}</Link>
             </div>
           </div>
         </div>
