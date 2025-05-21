@@ -12,7 +12,10 @@ export default async function Portfolio() {
   //fetch page data
   const data = await apiService.getPagedata("wp/v2/pages/607");
   const pageData = data.acf;
-  
+
+  //fetch portfolio data
+  const potfolio_data = await apiService.getPagedata("custom/v1/portfolio-categories-with-post");
+  const portfolioList = potfolio_data;
 
   return (
     <>
@@ -53,7 +56,7 @@ export default async function Portfolio() {
         <NavLink href="/">Home</NavLink>/
         <NavLink href="/portfolio">Portfolio</NavLink>
       </div>
-      <PortfolioList />
+      <PortfolioList portfolio_list={portfolioList}/>
       <BrandMarket
         title="The Leader In Digital Marketing"
         description="The top-rated software and digital marketing firm in the Canada, with more than 200 five-star reviews from past clients"

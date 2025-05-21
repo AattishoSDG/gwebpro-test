@@ -41,7 +41,7 @@ const tabsData = [
       {
         addressTitle: "Toronto",
         location: [
-          "2275 Lake Shore<br />Boulevard West, Unit<br />#533<br />Toronto ON<br />M8V 3Y3",
+          "2275 Lake Shore<br />Boulevard West, Unit<br />#533<br/>Toronto ON<br />M8V 3Y3",
         ],
         phNumber: "1-888-445-3334",
         telNumber: "8884453334",
@@ -106,10 +106,8 @@ const AddressTab = ({addressList}) => {
                     >
                       {tab.address_phone_number}
                     </a>
-                    <a
-                      href={tab.address_direction_link}
-                      className="direction_btn"
-                    >
+                    <a href={tab.address_direction_link}
+                      className="direction_btn">
                       Get Directions
                     </a>
                   </div>
