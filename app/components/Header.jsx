@@ -98,23 +98,23 @@ const Header = () => {
                               <p>We are Reviewed on</p>
                               <div className="platforms">
                                 <a href="">
-                                  <img src="images/gwebpro-clutch.png" alt="" />
+                                  <img src="/images/gwebpro-clutch.png" alt="" />
                                 </a>
                                 <a href="">
                                   <img
-                                    src="images/gwebpro-google-reviews.png"
+                                    src="/images/gwebpro-google-reviews.png"
                                     alt=""
                                   />
                                 </a>
                                 <a href="">
                                   <img
-                                    src="images/gwebpro-glassdoor.png"
+                                    src="/images/gwebpro-glassdoor.png"
                                     alt=""
                                   />
                                 </a>
                                 <a href="">
                                   <img
-                                    src="images/gwebpro-ambitionbox.png"
+                                    src="/images/gwebpro-ambitionbox.png"
                                     alt=""
                                   />
                                 </a>

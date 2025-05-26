@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
+import NavLink from "../components/NavLink";
 
 export default function PortfolioList({portfolio_list}) {
  if (portfolio_list) {
@@ -41,10 +42,9 @@ export default function PortfolioList({portfolio_list}) {
                       <ul>
                         {item.taxonomies.map((cat, l) => (
                         <li key={l}>{cat.name}</li>
-                         ))}
-                        
+                         ))}  
                       </ul>
-                      <a href="#">View Case Study</a>
+                      <NavLink href={`/portfolio/${item.slug}`}>View Case Study</NavLink>
                       <a href={item.acf_fields.live_site_link} target="_blank">View Live Site</a>
                     </div>
                     <div className="col-md-6">
@@ -58,66 +58,7 @@ export default function PortfolioList({portfolio_list}) {
                   </div>
                   ))}
 
-                  {/* <div className="row portfolio-row">
-                    <div className="col-md-6 has-btn-grp">
-                      <h3>Trust Mortgages</h3>
-                      <h4>
-                        Web Design and Development for a Professional Business
-                      </h4>
-                      <p>
-                        Lorem Ipsum has been the industry&apos;s standard dummy
-                        text ever since the 1500s, when an unknown printer took
-                        a galley of type and scrambled it to make a type
-                        specimen book.
-                      </p>
-                      <ul>
-                        <li>Web Development</li>
-                        <li>SEO</li>
-                        <li>Pay Per Click</li>
-                      </ul>
-                      <a href="">View Case Study</a>
-                      <a href="">View Live Site</a>
-                    </div>
-                    <div className="col-md-6">
-                      <Image
-                        src="/images/portfolio-trust-mortgages.webp"
-                        alt=""
-                        width={739}
-                        height={477}
-                      />
-                    </div>
-                  </div> */}
-
-                  {/* <div className="row portfolio-row">
-                    <div className="col-md-6 has-btn-grp">
-                      <h3>Woodbine Banquest Hall</h3>
-                      <h4>
-                        Web Design and Development for a Professional Business
-                      </h4>
-                      <p>
-                        Lorem Ipsum has been the industry&apos;s standard dummy
-                        text ever since the 1500s, when an unknown printer took
-                        a galley of type and scrambled it to make a type
-                        specimen book.
-                      </p>
-                      <ul>
-                        <li>Web Development</li>
-                        <li>SEO</li>
-                        <li>Pay Per Click</li>
-                      </ul>
-                      <a href="">View Case Study</a>
-                      <a href="">View Live Site</a>
-                    </div>
-                    <div className="col-md-6">
-                      <Image
-                        src="/images/portfolio-woodbine.webp"
-                        alt=""
-                        width={739}
-                        height={477}
-                      />
-                    </div>
-                  </div> */}
-
+           
                 </div>
                 {/* <div className="row view-more">
                   <div className="col-12">

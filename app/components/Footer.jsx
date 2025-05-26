@@ -1,10 +1,17 @@
-"use client";
+//"use client";
 import Link from "next/link";
 // import { Link } from "react-router-dom";
 import { LogoWhite } from "./SVG";
 import AccordionFooter from "./AccordionFooter";
 
-const Footer = () => {
+import apiService from "../apiServices/apiService"; // Import the service
+
+const Footer = async () => {
+
+  //fetch page data
+  const f_data = await apiService.getPagedata("acf/v1/options/");
+  const footerData = f_data;
+
   return (
     <>
       <footer className="footer_sec">
@@ -27,54 +34,43 @@ const Footer = () => {
           <div className="row">
             <div className="col-lg-6 footer_brand">
               <ul>
-                <li>
-                  <a href="/">
-                    <img src="images/clutch.svg" alt="images" />
+               {footerData.review_site_list.map((row, k) => (
+                <li key={k}>
+                  <a href={row.review_site_link} target="_blank">
+                    <img src={row.review_site_logo} alt={row.review_site_name} />
                   </a>
                 </li>
-                <li>
-                  <a href="/">
-                    <img src="images/google-reviews.png" alt="images" />
-                  </a>
-                </li>
-                <li>
-                  <a href="/">
-                    <img src="images/glassdoor.png" alt="images" />
-                  </a>
-                </li>
-                <li>
-                  <a href="/">
-                    <img src="images/ambitionbox.png" alt="images" />
-                  </a>
-                </li>
+               ))}
+                
               </ul>
             </div>
 
             <div className="col-lg-6 social_blk d-flex align-items-center justify-content-lg-end">
               <p>Connect with US</p>
               <ul>
+                
                 <li>
-                  <a href="/">
+                  <a href={footerData.social_site_list[0].social_site_link} target="_blank">
                     <i className="fa-brands fa-facebook-f"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="/">
+                  <a href={footerData.social_site_list[1].social_site_link} target="_blank">
                     <i className="fa-brands fa-x-twitter"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="/">
+                  <a href={footerData.social_site_list[2].social_site_link} target="_blank" >
                     <i className="fa-brands fa-linkedin-in"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="/">
+                  <a href={footerData.social_site_list[3].social_site_link} target="_blank" >
                     <i className="fa-brands fa-pinterest-p"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="/">
+                  <a href={footerData.social_site_list[4].social_site_link} target="_blank">
                     <i className="fa-brands fa-youtube"></i>
                   </a>
                 </li>
