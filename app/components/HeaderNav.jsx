@@ -29,7 +29,7 @@ const HeaderNav = ({headerData}) => {
   const pathname = usePathname(); //Gets current path (e.g., '/dashboard')
   // const searchParams = useSearchParams(); // Gets query params (URLSearchParams object)
   useEffect(
-    function (){
+    function(){
       setIsMobileMenuOpen(false);
     },
     [pathname]
@@ -53,7 +53,7 @@ const HeaderNav = ({headerData}) => {
           <div className="container-fluid header_nav d-flex align-items-center justify-content-between">
             <div className="logo">
               <Link href="/">
-                <Logo />
+                <Logo/>
               </Link>
             </div>
 

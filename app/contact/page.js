@@ -1,9 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import AddressTab from "../components/AddressTab";
+
 import CheckScreenWidth from "../components/CheckScreenWidth";
 import NavLink from "../components/NavLink";
 import apiService from "../apiServices/apiService"; // Import the service
+
+import ContactForm from "../components/ContactForm";
 
 export default async function Contact(){
   //fetch address data
@@ -69,79 +72,9 @@ export default async function Contact(){
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="col">
-              <div className="contact-form">
-                <form>
-                  <div className="row">
-                    <div className="col-md-6">
-                      <input
-                        type="text"
-                        name=""
-                        id=""
-                        placeholder="First Name *"
-                      />
-                    </div>
-                    <div className="col-md-6">
-                      <input
-                        type="text"
-                        name=""
-                        id=""
-                        placeholder="Last Name *"
-                      />
-                    </div>
-                    <div className="col-md-6">
-                      <input type="email" name="" id="" placeholder="Email *" />
-                    </div>
-                    <div className="col-md-6">
-                      <input
-                        type="tel"
-                        name=""
-                        id=""
-                        placeholder="Phone Number *"
-                      />
-                    </div>
-                    <div className="col-md-6">
-                      <input
-                        type="text"
-                        name=""
-                        id=""
-                        placeholder="Company Name *"
-                      />
-                    </div>
-                    <div className="col-md-6">
-                      <select name="" id="">
-                        <option value="" defaultValue>
-                          Services
-                        </option>
-                        <option value="web-development">Web Development</option>
-                        <option value="app-development">App Development</option>
-                        <option value="ui-ux-design">UI/UX Design</option>
-                        <option value="cloud-computing">Cloud Computing</option>
-                        <option value="cyber-security">Cyber Security</option>
-                        <option value="data-analytics">Data Analytics</option>
-                        <option value="it-consulting">IT Consulting</option>
-                      </select>
-                    </div>
-                    <div className="col-md-12">
-                      <input
-                        type="text"
-                        name=""
-                        id=""
-                        placeholder="Subject *"
-                      />
-                    </div>
-                    <div className="col-md-12">
-                      <textarea name="" id="" placeholder="Message"></textarea>
-                    </div>
-                    <div className="col-md-12">
-                      <button>Submit Message</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
+
+          <ContactForm/>
+
         </div>
       </section>
       <section className="address_blk contact-form-page pad_cmn_blk">
