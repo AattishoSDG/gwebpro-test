@@ -19,6 +19,7 @@ import HomeDiscoverSlider from "./components/HomeDiscoverSlider";
 import CheckScreenWidth from "./components/CheckScreenWidth";
 import CheckMobile from "./components/CheckMobile";
 import DiscoverScroll from "./components/DiscoverScroll";
+import ScrollButton from "./components/ScrollButton";
 
 // import CheckMobile from "../components/CheckMobile";
 // Register the ScrollTrigger plugin
@@ -49,8 +50,6 @@ const Home = async () => {
   //fetch address data
   const addressdata = await apiService.getacfData("acf/v1/options/");
   const addrsData = addressdata.address_list;
-
- 
 
   // const sectionRef = useRef(null);
   // const pinColumnRef = useRef(null);
@@ -142,7 +141,8 @@ const Home = async () => {
                 }}
               ></h1>
               <p>
-                <span className="scroll"></span>
+                {/* <button className="scroll"></button> */}
+                <ScrollButton sectionId="leader-in-marketing" />
                 <span>{pageData.banner_description}</span>
               </p>
               <div
@@ -337,7 +337,7 @@ const Home = async () => {
 
       <section className="address_blk pad_cmn_blk">
         <div className="container">
-          <AddressTab  addressList= {addrsData}/>
+          <AddressTab addressList={addrsData} />
         </div>
       </section>
     </>

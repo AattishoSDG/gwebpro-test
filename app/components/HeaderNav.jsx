@@ -11,7 +11,7 @@ import Tab from "react-bootstrap/Tab";
 import useScrollDirection from "../hooks/useScrollDirection";
 import useIsScrolled from "../hooks/useIsScrolled";
 
-const HeaderNav = ({headerData}) => {
+const HeaderNav = ({ headerData }) => {
   const [isHoveringSubmenu, setIsHoveringSubmenu] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
@@ -29,7 +29,7 @@ const HeaderNav = ({headerData}) => {
   const pathname = usePathname(); //Gets current path (e.g., '/dashboard')
   // const searchParams = useSearchParams(); // Gets query params (URLSearchParams object)
   useEffect(
-    function(){
+    function () {
       setIsMobileMenuOpen(false);
     },
     [pathname]
@@ -53,7 +53,7 @@ const HeaderNav = ({headerData}) => {
           <div className="container-fluid header_nav d-flex align-items-center justify-content-between">
             <div className="logo">
               <Link href="/">
-                <Logo/>
+                <Logo />
               </Link>
             </div>
 
@@ -97,13 +97,20 @@ const HeaderNav = ({headerData}) => {
                             <div className="reviewed-on">
                               <p>We are Reviewed on</p>
                               <div className="platforms">
-                                 {headerData.header_review_sites.map((row, k) => (
-                                <a href={row.review_site_link_header} target="_blank" key={k}>
-                                  <img src={row.review_site_logo_header} alt={row.review_site_name_header} />
-                                </a>
-                                 ))}
-                                
-                                
+                                {headerData.header_review_sites.map(
+                                  (row, k) => (
+                                    <a
+                                      href={row.review_site_link_header}
+                                      target="_blank"
+                                      key={k}
+                                    >
+                                      <img
+                                        src={row.review_site_logo_header}
+                                        alt={row.review_site_name_header}
+                                      />
+                                    </a>
+                                  )
+                                )}
                               </div>
                             </div>
                           </div>
@@ -338,7 +345,13 @@ const HeaderNav = ({headerData}) => {
                   <Link href="/contact">Get a Quote</Link>
                 </li> */}
                 <li>
-                  <Link href="/contact">Request For Proposal</Link>
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfyIGXnukYa9Cybk3NeHk4gC4F44U5o66GUMi9umkkaFi2V2w/viewform"
+                    target="_blank"
+                    rel="nofollow"
+                  >
+                    Request For Proposal
+                  </a>
                 </li>
               </ul>
             </div>
@@ -669,7 +682,13 @@ const HeaderNav = ({headerData}) => {
                       <Link href="/contact">Get a Quote</Link>
                     </li> */}
                     <li>
-                      <Link href="/contact">Request For Proposal</Link>
+                      <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfyIGXnukYa9Cybk3NeHk4gC4F44U5o66GUMi9umkkaFi2V2w/viewform"
+                        target="_blank"
+                        rel="nofollow"
+                      >
+                        Request For Proposal
+                      </a>
                     </li>
                   </ul>
                 </div>

@@ -3,6 +3,7 @@
 import Slider from "react-slick";
 import CheckScreenWidth from "./CheckScreenWidth";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HomeDiscoverSlider({ pageData }) {
   const discoverSliderSettings = {
@@ -65,7 +66,7 @@ export default function HomeDiscoverSlider({ pageData }) {
                     {pageData.discover_repeater.map((mrow, k) => {
                       return (
                         <div className="" key={k}>
-                          <div className="discover-card">
+                          <Link className="discover-card" href={"/about"}>
                             <Image
                               width={96}
                               height={96}
@@ -74,7 +75,7 @@ export default function HomeDiscoverSlider({ pageData }) {
                             />
                             <h4>{mrow.discover_repeater_title}</h4>
                             <p>{mrow.discover_repeater_description}</p>
-                          </div>
+                          </Link>
                         </div>
                       );
                     })}

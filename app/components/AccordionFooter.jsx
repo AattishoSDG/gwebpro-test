@@ -100,14 +100,9 @@ const AccordionFooter = () => {
       id: 1,
       title: "Services",
       data: [
-        "Search engine Optimization Services",
-        "Paid & Social Media",
-        "Branding & Content",
-        "Design",
-        "Development",
-        "Software Solutions",
-        "Digital Product Strategy",
-        "Digital Transformation Consulting",
+        { name: "Services Level 1", link: "/services" },
+        { name: "Services Level 2", link: "/services-level-two" },
+        { name: "Services Level 3", link: "/services-level-three" },
       ],
     },
 
@@ -118,32 +113,36 @@ const AccordionFooter = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit odit recusandae libero.",
 
       data: [
-        "Search engine Optimization Services 2",
-        "Paid & Social Media",
-        "Branding & Content",
-        "Design",
-        "Development",
-        "Software Solutions",
-        "Digital Product Strategy",
-        "Digital Transformation Consulting",
+        { name: "About", link: "/about" },
+        { name: "Portfolio", link: "/portfolio" },
+        { name: "Privacy Policy", link: "/privacy-policy" },
+        { name: "FAQ", link: "/faq" },
       ],
     },
 
     {
       id: 3,
-      title: "Blog",
+      title: "Quick Links",
       address:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit odit recusandae libero.",
 
       data: [
-        "Search engine Optimization Services 3",
-        "Paid & Social Media",
-        "Branding & Content",
-        "Design",
-        "Development",
-        "Software Solutions",
-        "Digital Product Strategy",
-        "Digital Transformation Consulting",
+        {
+          name: "Annual Scholarship 2019",
+          link: "https://www.gwebpro.com/annual-scholarship-2019/",
+        },
+        {
+          name: "Annual Scholarship 2018",
+          link: "https://www.gwebpro.com/annual-scholarship-2018/",
+        },
+        // {
+        //   name: "Client Portal",
+        //   link: "https://www.gwebpro.com/client-portal/",
+        // },
+        {
+          name: "Questionnaires",
+          link: "/questionnaires",
+        },
       ],
     },
   ];
@@ -178,7 +177,7 @@ const AccordionFooter = () => {
                 <ul className="acc-desc">
                   {fdata.data.map((item, index) => (
                     <li key={index}>
-                      <Link href="/">{item}</Link>
+                      <Link href={item.link}>{item.name}</Link>
                     </li>
                   ))}
                 </ul>

@@ -3,6 +3,7 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,7 +67,7 @@ export default function DiscoverScroll({ pageData }) {
               <div className="row">
                 {pageData.discover_repeater.map((row, i) => (
                   <div className="col-md-6" key={i}>
-                    <div className="discover-card">
+                    <Link className="discover-card" href="/about">
                       <Image
                         width={96}
                         height={96}
@@ -75,7 +76,7 @@ export default function DiscoverScroll({ pageData }) {
                       />
                       <h4>{row.discover_repeater_title}</h4>
                       <p>{row.discover_repeater_description}</p>
-                    </div>
+                    </Link>
                   </div>
                 ))}
               </div>

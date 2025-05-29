@@ -2,6 +2,7 @@
 "use client";
 import { useState } from "react";
 import { DownArr } from "./SVG";
+import Link from "next/link";
 
 // const tabsData = [
 //   {
@@ -149,12 +150,15 @@ const Tabs = ({ tabsData }) => {
                   {Array.isArray(data.marketing_repeater) &&
                     data.marketing_repeater.map((nestedData, j) => (
                       <div className="" key={j}>
-                        <div className="inner_DataCard text-center">
+                        <Link
+                          className="inner_DataCard text-center d-inline-block"
+                          href="/about"
+                        >
                           <div className="DataCard_icn">
                             <img src={nestedData.marketing_logo} alt="images" />
                           </div>
                           <p>{nestedData.marketing_title}</p>
-                        </div>
+                        </Link>
                       </div>
                     ))}
                 </div>

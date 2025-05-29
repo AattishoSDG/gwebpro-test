@@ -52,8 +52,7 @@ const tabsData = [
   },
 ];
 
-const AddressTab = ({addressList}) => {
- 
+const AddressTab = ({ addressList }) => {
   // State to track the active tab
   const [activeTab, setActiveTab] = useState(0);
 
@@ -75,7 +74,6 @@ const AddressTab = ({addressList}) => {
     slidesToShow: 1,
     variableWidth: true,
   };
-
 
   if (addressList) {
     return (
@@ -106,8 +104,10 @@ const AddressTab = ({addressList}) => {
                     >
                       {tab.address_phone_number}
                     </a>
-                    <a href={tab.address_direction_link}
-                      className="direction_btn">
+                    <a
+                      href={tab.address_direction_link}
+                      className="direction_btn"
+                    >
                       Get Directions
                     </a>
                   </div>
@@ -117,14 +117,18 @@ const AddressTab = ({addressList}) => {
           </div>
 
           <div className="col-md-5 col-lg-6 tabContent">
-            {addressList.map((data, i) => (
-              <div
-                className={`desc ${activeTab === i ? "active" : ""}`}
-                key={i}
-              >
-                <img src={data.address_image} alt="images" />
-              </div>
-            ))}
+            <div className="sticky-location-pin">
+              {addressList.map((data, i) => (
+                <div
+                  className={`desc text-center ${
+                    activeTab === i ? "active" : ""
+                  }`}
+                  key={i}
+                >
+                  <img src={data.address_image} alt="images" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -148,7 +152,7 @@ const AddressTab = ({addressList}) => {
                           {/* Render sanitized HTML content */}
                           <p
                             dangerouslySetInnerHTML={{
-                              __html:tab.address_location,
+                              __html: tab.address_location,
                             }}
                           ></p>
                           <a

@@ -67,7 +67,7 @@ const BrandMarket = ({ title, description, brandLogo }) => {
 
   return (
     <>
-      <section className="logo_blk pad_cmn_blk">
+      <section className="logo_blk pad_cmn_blk" id="leader-in-marketing">
         <div className="container">
           <div className="title_blk text-center">
             <h2>{title}</h2>
