@@ -38,18 +38,6 @@ export default function page() {
       </div>
       <section className="section-contact-form pad_cmn_blk">
         <div className="container">
-          {/* <div className="row">
-            <div className="col">
-              <div className="contact-form-title">
-                <h2>Meet your dedicated product team</h2>
-                <p>
-                  {" "}
-                  Lorem Ipsum has been the industry's standard dummy text ever
-                  since the 1500s.
-                </p>
-              </div>
-            </div>
-          </div> */}
           <div className="row">
             <div className="col">
               <div className="contact-form form-questionnaires">

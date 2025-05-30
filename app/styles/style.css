@@ -10,7 +10,8 @@ body { padding: 0 0 0 0; margin: 0 0 0 0; font-size: 16px; font-family: var(--ma
 body.no-scroll { overflow: hidden; }
 ul { margin: 0; padding: 0; list-style: none; }
 img { max-width: 100%; height: auto; }
-a { transition: 0.3s ease-in-out; text-decoration: none; display: inline-block; }
+a { transition: 0.3s ease-in-out; text-decoration: none; display: inline-block; color: var(--main_color);  }
+a:hover {  color: #35a1c8;  }
 /* .container { max-width: 1352px; }
 */
 .logo { padding-block: 16px; height: 100%; }
@@ -1010,8 +1011,12 @@ to { transform: translateX(-50%); /* Scrolls halfway (ensures loop continuity) *
 .footer_text { color: #fff; font-size: 14px; font-weight: 400; max-width: 500px; }
 .sticky-location-pin { position: sticky; top: var(--height-menu-fixed-wrapper); z-index: -1; }
 .form-questionnaires { max-width: 900px; }
-.form-questionnaires p { text-align: left; width: 100%;margin-bottom: 1rem; }
-.form-questionnaires label { text-align: left; width: 100%;margin-bottom: 1rem; }
+.form-questionnaires p { text-align: left; width: 100%; margin-bottom: 1rem; }
+.form-questionnaires label { text-align: left; width: 100%; margin-bottom: 1rem; }
 .form-questionnaires ::placeholder { color: rgba(0, 0, 0, 0.25); }
 .form-questionnaires input[type="file"] { border-bottom-color: transparent; }
-.form-questionnaires input:focus,select:focus,textarea:focus{outline: 2px solid var(--main_color);outline-offset: 0px;border-color: var(--main_color);}
+.form-questionnaires input:focus,select:focus,textarea:focus { outline: 2px solid var(--main_color); outline-offset: 0px; border-color: var(--main_color); }
+.input_radio { display: flex; align-items: center; flex-wrap: wrap; }
+.input_radio input[type="radio"] { width: auto; margin-right: .5rem; }
+.input_radio label { margin-bottom: 0; width: auto; }
+.input_radio input[type="radio"]:not(:first-child) { margin-left: 1rem; }
