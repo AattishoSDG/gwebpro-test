@@ -49,6 +49,9 @@ XX-Large
 .stats .number { font-size: 54px; line-height: normal; }
 .stats .field { font-size: 28px; line-height: normal; }
 .contact-form-title h2 { font-size: 68px; line-height: 72px; }
+.gwebpro-prose h1 { font-size: 42px; }
+.gwebpro-prose h2 { font-size: 34px; }
+.gwebpro-prose h3 { font-size: 28px; }
  }
 @media (max-width: 1399px) {
  :root { --height-menu-fixed-wrapper: 80px; }
@@ -141,7 +144,7 @@ XX-Large
 .banner-content.large h1 { font-size: 50px; line-height: 54px; }
 .banner-content.large h1 span { font-size: 30px; line-height: 34px; }
 .has-btn-grp a { padding: 16px 20px; font-size: 17px; }
-.has-btn-all > a {padding: 16px 20px; font-size: 17px;}
+.has-btn-all > a { padding: 16px 20px; font-size: 17px; }
 form button { padding: 16px 20px; font-size: 17px; }
 .has-btn-grp a:first-of-type { margin-right: 16px; }
 .portfolio-row h3 { font-size: 28px; line-height: 32px; }
@@ -184,6 +187,10 @@ form button { padding: 16px 20px; font-size: 17px; }
 .contact_blk .text a { font-size: 22px; line-height: 26px; }
 .socials_blk p { font-size: 30px; line-height: 34px; }
 .socials_blk a { width: 85px; height: 85px; }
+.gwebpro-prose h1 { font-size: 40px; }
+.gwebpro-prose h2 { font-size: 32px; }
+.gwebpro-prose h3 { font-size: 26px; }
+.gwebpro-prose h4 { font-size: 22px; }
  }
 @media (max-width: 1199px) {
  /* FOR SCREENS BELOW 1200px */
@@ -335,6 +342,12 @@ form button { padding: 16px 20px; font-size: 17px; }
   .sub-menu .title a { font-size: 16px; }
 .sub-menu .sub-links li a { font-size: 14px; }
 .sub-menu .sub-menu-title a { padding: 10px 20px; font-size: 16px; }
+.gwebpro-prose h1 { font-size: 38px; }
+.gwebpro-prose h2 { font-size: 30px; }
+.gwebpro-prose h3 { font-size: 24px; }
+.gwebpro-prose h4 { font-size: 20px; }
+.gwebpro-prose p,
+  .gwebpro-prose li { font-size: 15px; }
  }
 @media (max-width: 991px) {
  .discover_blk { height: auto; overflow: hidden; position: relative; }
@@ -475,7 +488,7 @@ form button { padding: 16px 20px; font-size: 17px; }
 .portfolio-row ul li::before { height: 24px; width: 24px; }
 .portfolio-row ul li:not(:last-child) { margin-right: 24px; }
 .has-btn-grp a { font-size: 16px; padding: 12px 16px; }
-.has-btn-all > a {font-size: 16px; padding: 12px 16px; }
+.has-btn-all > a { font-size: 16px; padding: 12px 16px; }
 form button { font-size: 16px; padding: 12px 16px; }
 .section-portfolio-list .title_blk { margin-top: 40px; }
 .portfolio-rows .row { padding-block: 40px; }
@@ -512,6 +525,13 @@ form button { font-size: 16px; padding: 12px 16px; }
 .navmenu_end ul li:first-child a { font-size: 14px; }
 .navmenu_end ul li:last-child a { font-size: 14px; }
 .navmenu_end ul { justify-content: center; flex-wrap: wrap; }
+.gwebpro-prose h1 { font-size: 34px; }
+.gwebpro-prose h2 { font-size: 28px; }
+.gwebpro-prose h3 { font-size: 22px; }
+.gwebpro-prose h4 { font-size: 19px; }
+.gwebpro-prose h5 { font-size: 18px; }
+.gwebpro-prose p,
+  .gwebpro-prose li { font-size: 15px; }
  }
 @media (max-width: 767px) {
  .section-home-hero h1 { text-align: center; margin-left: auto; margin-right: auto; }
@@ -650,6 +670,16 @@ form button { font-size: 16px; padding: 12px 16px; }
 .contact_blk .text a { font-size: 24px; line-height: 28px; }
 .contact_blk { padding: 50px 24px; }
 .socials_blk p { font-size: 24px; line-height: 28px; }
+.gwebpro-prose h1 { font-size: 30px; }
+.gwebpro-prose h2 { font-size: 26px; }
+.gwebpro-prose h3 { font-size: 22px; }
+.gwebpro-prose h4 { font-size: 18px; }
+.gwebpro-prose h5 { font-size: 17px; }
+.gwebpro-prose h6 { font-size: 16px; }
+.gwebpro-prose p,
+  .gwebpro-prose li { font-size: 14px; }
+.gwebpro-prose ul,
+  .gwebpro-prose ol { padding-left: 20px; }
  }
 @media (max-width: 575px) {
  .pad_cmn_blk { padding-block: 25px; }
@@ -779,7 +809,7 @@ form button { font-size: 16px; padding: 12px 16px; }
 .portfolio-row ul li:not(:last-child) { margin-right: 20px; }
 .portfolio-row ul li { font-size: 12px; }
 .has-btn-grp a { font-size: 12px; padding-block: 16px; padding-inline: 32px; margin-inline: 4px; margin-block: 4px; }
-.has-btn-all > a {font-size: 12px; padding-block: 16px; padding-inline: 32px; margin-inline: 4px; margin-block: 4px;}
+.has-btn-all > a { font-size: 12px; padding-block: 16px; padding-inline: 32px; margin-inline: 4px; margin-block: 4px; }
 form button { font-size: 12px; padding-block: 16px; padding-inline: 32px; margin-inline: 4px; margin-block: 4px; }
 .web-portfolio-mobile { margin-top: -140px; }
 .web-project-details { padding: 0; background-color: transparent; }
@@ -807,7 +837,13 @@ select { padding: 12px 2px; }
 input::placeholder,
   textarea::placeholder { color: #000; font-size: 14px; }
 .contact-page .widgets-container .widget { width: 150px; height: 150px; }
-.socials_blk a { font-size: 20px; width: 52px; height: 52px; border-radius: 12px; }
+.socials_blk a { font-size: 20px; width: 40px; height: 40px; border-radius: 12px; }
 .contact-page .widgets-container { margin-top: 0px; flex-wrap: nowrap; }
 .widgets-col { overflow-x: auto; height: 175px; }
+.gwebpro-prose h1 { font-size: 28px; }
+.gwebpro-prose h2 { font-size: 24px; }
+.gwebpro-prose h3 { font-size: 20px; }
+.gwebpro-prose ul,
+  .gwebpro-prose ol { padding-left: 18px; }
+.socials_blk > *:last-child { gap: 14px; }
  }

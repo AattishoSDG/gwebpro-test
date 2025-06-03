@@ -33,7 +33,7 @@ export default function page() {
       <div className="breadcrumb">
         <Link href="/">Home</Link>/<NavLink href="/faq">FAQ</NavLink>
       </div>
-      <section className="pad_cmn_blk">
+      <section className="pad_cmn_blk faq-page-faqs">
         <div className="container">
           <div className="row">
             <div className="col">

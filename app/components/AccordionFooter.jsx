@@ -129,11 +129,11 @@ const AccordionFooter = () => {
       data: [
         {
           name: "Annual Scholarship 2019",
-          link: "https://www.gwebpro.com/annual-scholarship-2019/",
+          link: "/annual-scholarship-2019",
         },
         {
           name: "Annual Scholarship 2018",
-          link: "https://www.gwebpro.com/annual-scholarship-2018/",
+          link: "/annual-scholarship-2018",
         },
         // {
         //   name: "Client Portal",

@@ -34,11 +34,11 @@ export default function page() {
         <Link href="/">Home</Link>/
         <NavLink href="/privacy-policy">Privacy Policy</NavLink>
       </div>
-      <section className="pad_cmn_blk">
+      <section className="pad_cmn_blk privacy-policy-page">
         <div className="container">
           <div className="row">
             <div className="col">
-              <div>
+              <div className="gwebpro-prose">
                 <p>
                   G Web Pro Marketing Inc. is committed to respecting the
                   privacy of individuals and recognizes a need for the

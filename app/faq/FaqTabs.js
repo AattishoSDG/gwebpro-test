@@ -5,7 +5,7 @@ import Accordion from "react-bootstrap/Accordion";
 import Link from "next/link";
 export default function FaqTabs() {
   return (
-    <Tabs defaultActiveKey="0" id="uncontrolled-tab-example" className="mb-3">
+    <Tabs defaultActiveKey="0" id="uncontrolled-tab-example" className="">
       <Tab eventKey="0" title="Digital Marketing FAQ">
         <Accordion defaultActiveKey="0">
           <Accordion.Item eventKey="0">
