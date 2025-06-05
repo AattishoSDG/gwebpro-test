@@ -11,7 +11,7 @@ import ClientSlider from "./components/ClientSlider";
 import MarqueBlock from "./components/MarqueBlock";
 import AddressTab from "./components/AddressTab";
 import BrandMarket from "./components/BrandMarket";
-import CustomCursor from "./components/CustomCursor";
+import CustomCursorWrapper from "./components/CustomCursor";
 import { LogoGwebproLetterG } from "./components/SVG";
 
 import apiService from "./apiServices/apiService"; // Import the service
@@ -167,18 +167,20 @@ const Home = async () => {
               </div>
             </div>
             <div className="col-md-6 pe-md-5 order-1 order-md-2">
-              <div
-                className="video-container"
-                // onMouseEnter={() => setIsHovered(true)}
-                // onMouseLeave={() => setIsHovered(false)}
-              >
-                <video
-                  src={pageData.banner_video}
-                  autoPlay={true}
-                  loop={true}
-                  muted={true}
-                ></video>
-              </div>
+              <CustomCursorWrapper>
+                <div
+                  className="video-container"
+                  // onMouseEnter={() => setIsHovered(true)}
+                  // onMouseLeave={() => setIsHovered(false)}
+                >
+                  <video
+                    src={pageData.banner_video}
+                    autoPlay={true}
+                    loop={true}
+                    muted={true}
+                  ></video>
+                </div>
+              </CustomCursorWrapper>
             </div>
           </div>
         </div>

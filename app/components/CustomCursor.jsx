@@ -1,12 +1,13 @@
 "use client";
+
 import { useState, useEffect } from "react";
+
 import "./CustomCursor.css"; // Import the CSS styles for the cursor
-import PropTypes from "prop-types";
 
 const CustomCursor = ({ isHovered }) => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isInIframe, setIsInIframe] = useState(false);
-  // const [isHovered, setIsHovered] = useState(false);
+
   useEffect(() => {
     // Mouse move event to update cursor position
     const handleMouseMove = (e) => {
@@ -47,7 +48,15 @@ const CustomCursor = ({ isHovered }) => {
   );
 };
 
-export default CustomCursor;
-CustomCursor.propTypes = {
-  isHovered: PropTypes.bool, // This prop will come from the parent component (Section)
-};
+export default function CustomCursorWrapper({ children }) {
+  const [isHovered, setIsHovered] = useState(false);
+  return (
+    <div
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <CustomCursor isHovered={isHovered} />
+      {children}
+    </div>
+  );
+}
