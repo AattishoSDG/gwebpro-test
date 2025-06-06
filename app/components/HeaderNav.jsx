@@ -15,6 +15,7 @@ const HeaderNav = ({ headerData }) => {
   const [isHoveringSubmenu, setIsHoveringSubmenu] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
+  const [showMegaMenu, setShowMegaMenu] = useState(false);
   const scrollDirection = useScrollDirection(100, isHoveringSubmenu);
   const isScrolled = useIsScrolled();
   // const location = useLocation();
@@ -40,6 +41,10 @@ const HeaderNav = ({ headerData }) => {
       setActiveIndex(index);
     }
   }
+  function handleMegaMenuToggle(e) {
+    e.preventDefault();
+    setShowMegaMenu((is) => !is);
+  }
   return (
     <div
       className={`menu-fixed-wrapper ${
@@ -60,12 +65,14 @@ const HeaderNav = ({ headerData }) => {
             <div className="navmenu_mid">
               <ul>
                 <li>
-                  <span onClick={(e) => e.preventDefault()}>Services</span>
+                  <span onClick={handleMegaMenuToggle}>Services</span>
                   <div
                     // className={`sub-menu ${
                     //   scrollDirection === "down" ? "hide" : "show"
                     // }`}
-                    className="sub-menu"
+                    className={`sub-menu ${
+                      showMegaMenu ? "sub-menu-open" : ""
+                    }`}
                   >
                     <div className="container-fluid sub-menu-container scrollable-div">
                       <Tab.Container defaultActiveKey={0}>

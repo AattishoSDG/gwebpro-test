@@ -70,7 +70,7 @@ XX-Large
 .section-home-hero .video-container { width: 100%; max-height: 450px; }
 .section-home-hero h1 { font-size: 44px; line-height: 58px; margin-bottom: 15px; margin-top: 24px; }
 .section-home-hero h1 span { font-size: 44px; line-height: 58px; }
-.section-home-hero p { font-size: 16px; line-height: 28px; }
+.section-home-hero .next-section-btn { font-size: 16px; line-height: 28px; gap: 50px; }
 .widgets-container .widget { width: 100px; height: 100px; }
 .title_blk :is(h1, h2) { font-size: 32px; line-height: 48px; margin-bottom: 18px; }
 .title_blk p,
@@ -97,10 +97,11 @@ XX-Large
 .tabs-container ul li { min-width: 150px; font-size: 16px; line-height: 24px; padding: 0px 5px 5px 5px; }
 .tabs-container ul li:after,
   .tabs-container ul li:last-child::before { height: 100%; }
-.inner_DataCard { width: 153px; height: 59px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding: 8px; margin-right: 10px; margin-bottom: 10px; }
+.inner_DataCard { width: 153px; /*height: 59px; */ flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding: 36px 8px 8px 8px; /*margin-right: 10px; margin-bottom: 10px; */ }
 .inner_DataCard:hover { box-shadow: #000 3px 3px 0; }
-.DataCard_icn { display: none; }
-.inner_DataCard p { font-size: 18px; line-height: 22px; margin-top: 0; }
+.DataCard_icn { width: 54px; height: 54px; margin-top: 0; }
+.DataCard_icn img { width: 28px; }
+.inner_DataCard p { font-size: 16px; line-height: 20px; margin-top: 0; }
 .tabs-container ul li .arr { margin-top: 0px; }
 .cardLogo { /* width: 137px; */
     /* height: 65px; */
@@ -200,7 +201,7 @@ form button { padding: 16px 20px; font-size: 17px; }
 .section-home-hero .video-container { width: 100%; max-height: 450px; }
 .section-home-hero h1 { font-size: 44px; line-height: 58px; margin-bottom: 15px; margin-top: 24px; }
 .section-home-hero h1 span { font-size: 44px; line-height: 58px; }
-.section-home-hero p { font-size: 16px; line-height: 28px; }
+.section-home-hero .next-section-btn { font-size: 16px; line-height: 28px; gap: 40px; }
 .widgets-container .widget { width: 100px; height: 100px; }
 .title_blk :is(h1, h2) { font-size: 32px; line-height: 48px; margin-bottom: 18px; }
 .title_blk p,
@@ -224,10 +225,6 @@ form button { padding: 16px 20px; font-size: 17px; }
 .tabs-container ul li { min-width: 150px; font-size: 16px; line-height: 24px; padding: 0px 5px 5px 5px; }
 .tabs-container ul li:after,
   .tabs-container ul li:last-child::before { height: 100%; }
-.inner_DataCard { width: 153px; height: 59px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding: 8px; margin-right: 10px; margin-bottom: 10px; }
-.inner_DataCard:hover { box-shadow: #000 3px 3px 0; }
-.DataCard_icn { display: none; }
-.inner_DataCard p { font-size: 18px; line-height: 22px; margin-top: 0; }
 .tabs-container ul li .arr { margin-top: 0px; }
 .cardLogo { /* width: 137px; */
     /* height: 65px; */
@@ -365,7 +362,7 @@ form button { padding: 16px 20px; font-size: 17px; }
 .section-home-hero .video-container { width: 100%; max-height: 300px; }
 .section-home-hero h1 { font-size: 34px; line-height: 48px; margin-bottom: 15px; margin-top: 24px; }
 .section-home-hero h1 span { font-size: 34px; line-height: 48px; }
-.section-home-hero p { font-size: 14px; line-height: 26px; }
+.section-home-hero .next-section-btn { font-size: 14px; line-height: 26px; gap: 30px; }
 .widgets-container .widget { width: 100px; height: 100px; }
 .title_blk :is(h1, h2) { font-size: 28px; line-height: 42px; margin-bottom: 18px; }
 .title_blk p,
@@ -390,10 +387,6 @@ form button { padding: 16px 20px; font-size: 17px; }
 .tabs-container ul li { min-width: 150px; font-size: 16px; line-height: 24px; padding: 0px 5px 5px 5px; }
 .tabs-container ul li:after,
   .tabs-container ul li:last-child::before { height: 100%; }
-.inner_DataCard { width: 153px; height: 59px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding: 8px; margin-right: 10px; margin-bottom: 10px; }
-.inner_DataCard:hover { box-shadow: #000 3px 3px 0; }
-.DataCard_icn { display: none; }
-.inner_DataCard p { font-size: 18px; line-height: 22px; margin-top: 0; }
 .tabs-container ul li .arr { margin-top: 0px; }
 .cardLogo { /* width: 137px; */
     /* height: 65px; */
@@ -534,16 +527,17 @@ form button { font-size: 16px; padding: 12px 16px; }
   .gwebpro-prose li { font-size: 15px; }
  }
 @media (max-width: 767px) {
- .section-home-hero h1 { text-align: center; margin-left: auto; margin-right: auto; }
-.section-home-hero p { text-align: center; margin-left: auto; margin-right: auto; }
-.section-home-hero p .scroll { display: none; }
+ .section-home-hero .video-container { cursor: unset; }
+.section-home-hero h1 { text-align: center; margin-left: auto; margin-right: auto; }
+.section-home-hero .next-section-btn { text-align: center; margin-left: auto; margin-right: auto; }
+.section-home-hero .next-section-btn .scroll { display: none; }
 .widgets-container { justify-content: center; margin-left: auto; margin-right: auto; }
 /* FOR SCREENS BELOW 768px */
   .pad_cmn_blk { padding-block: 35px; }
 .section-home-hero .video-container { width: 100%; max-height: 300px; }
 .section-home-hero h1 { font-size: 34px; line-height: 48px; margin-bottom: 15px; margin-top: 24px; }
 .section-home-hero h1 span { font-size: 34px; line-height: 48px; }
-.section-home-hero p { font-size: 14px; line-height: 26px; }
+.section-home-hero .next-section-btn { font-size: 14px; line-height: 26px; }
 .widgets-container .widget { width: 100px; height: 100px; }
 .title_blk :is(h1, h2) { font-size: 28px; line-height: 42px; margin-bottom: 18px; }
 .title_blk p,
@@ -567,10 +561,6 @@ form button { font-size: 16px; padding: 12px 16px; }
 .tabs-container ul li { min-width: 150px; font-size: 16px; line-height: 24px; padding: 0px 5px 5px 5px; }
 .tabs-container ul li:after,
   .tabs-container ul li:last-child::before { height: 100%; }
-.inner_DataCard { width: 153px; height: 59px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding: 8px; margin-right: 10px; margin-bottom: 10px; }
-.inner_DataCard:hover { box-shadow: #000 3px 3px 0; }
-.DataCard_icn { display: none; }
-.inner_DataCard p { font-size: 18px; line-height: 22px; margin-top: 0; }
 .tabs-container ul li .arr { margin-top: 0px; }
 .cardLogo { width: 137px; height: 65px; flex-shrink: 0; }
 .cardLogo img { max-width: 75%; }
@@ -680,6 +670,8 @@ form button { font-size: 16px; padding: 12px 16px; }
   .gwebpro-prose li { font-size: 14px; }
 .gwebpro-prose ul,
   .gwebpro-prose ol { padding-left: 20px; }
+.DataCard_icn { width: 44px; height: 44px; margin-top: 0; }
+.DataCard_icn img { width: 22px; }
  }
 @media (max-width: 575px) {
  .pad_cmn_blk { padding-block: 25px; }
@@ -687,7 +679,7 @@ form button { font-size: 16px; padding: 12px 16px; }
 .logo { max-width: 135px; }
 .section-home-hero h1 { font-size: 24px; line-height: 38px; margin-bottom: 10px; margin-top: 18px; }
 .section-home-hero h1 span { font-size: 24px; line-height: 38px; }
-.section-home-hero p { font-size: 12px; line-height: 24px; }
+.section-home-hero .next-section-btn { font-size: 12px; line-height: 24px; }
 .widgets-container .widget { width: 100px; height: 100px; }
 .title_blk :is(h1, h2) { font-size: 24px; line-height: 30px; margin-bottom: 18px; }
 .title_blk p,
@@ -709,10 +701,6 @@ form button { font-size: 16px; padding: 12px 16px; }
 .tabs-container ul li { min-width: 150px; font-size: 14px; line-height: 20px; padding: 0px 5px 5px 5px; }
 .tabs-container ul li:after,
   .tabs-container ul li:last-child::before { height: 100%; }
-.inner_DataCard { width: 153px; height: 59px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding: 8px; margin-right: 10px; margin-bottom: 10px; }
-.inner_DataCard:hover { box-shadow: #000 3px 3px 0; }
-.DataCard_icn { display: none; }
-.inner_DataCard p { font-size: 18px; line-height: 22px; margin-top: 0; }
 .tabs-container ul li .arr { margin-top: 0px; }
 .cardLogo { width: 137px; height: 65px; flex-shrink: 0; }
 .cardLogo img { max-width: 75%; }

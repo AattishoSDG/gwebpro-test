@@ -1,3 +1,4 @@
+// CHECK IF WIDTH IS GREATER THAN setWidth
 "use client";
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";

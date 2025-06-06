@@ -150,10 +150,7 @@ const Tabs = ({ tabsData }) => {
                   {Array.isArray(data.marketing_repeater) &&
                     data.marketing_repeater.map((nestedData, j) => (
                       <div className="" key={j}>
-                        <Link
-                          className="inner_DataCard text-center d-inline-block"
-                          href="/about"
-                        >
+                        <Link className="inner_DataCard" href="/about">
                           <div className="DataCard_icn">
                             <img src={nestedData.marketing_logo} alt="images" />
                           </div>

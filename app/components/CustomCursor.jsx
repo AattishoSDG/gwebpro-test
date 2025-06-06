@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 import "./CustomCursor.css"; // Import the CSS styles for the cursor
 
-const CustomCursor = ({ isHovered }) => {
+const CustomCursor = ({ isHovered, cursorText }) => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isInIframe, setIsInIframe] = useState(false);
 
@@ -43,19 +43,21 @@ const CustomCursor = ({ isHovered }) => {
         top: `${cursorPosition.y}px`,
       }}
     >
-      <img src="/images/custom-cursor-text.svg" alt="" />
+      {/* "/images/custom-cursor-text.svg" */}
+      <img src={cursorText} alt="" />
     </div>
   );
 };
 
-export default function CustomCursorWrapper({ children }) {
+export default function CustomCursorWrapper({ children, cursorText }) {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      className="d-flex"
     >
-      <CustomCursor isHovered={isHovered} />
+      <CustomCursor isHovered={isHovered} cursorText={cursorText} />
       {children}
     </div>
   );

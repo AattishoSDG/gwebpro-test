@@ -1,4 +1,5 @@
-"use client"
+// FOR MOBILE OR LESS THAN THE setWidth
+"use client";
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 

@@ -1,29 +1,23 @@
 // "use client";
 import Link from "next/link";
-import Image from "next/image";
-// import { useEffect, useLayoutEffect, useRef, useState } from "react";
-
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+// import gsap from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Tabs from "./components/Tabs";
 import ClientSlider from "./components/ClientSlider";
 import MarqueBlock from "./components/MarqueBlock";
 import AddressTab from "./components/AddressTab";
 import BrandMarket from "./components/BrandMarket";
-import CustomCursorWrapper from "./components/CustomCursor";
 import { LogoGwebproLetterG } from "./components/SVG";
-
 import apiService from "./apiServices/apiService"; // Import the service
 import HomeDiscoverSlider from "./components/HomeDiscoverSlider";
 import CheckScreenWidth from "./components/CheckScreenWidth";
 import CheckMobile from "./components/CheckMobile";
 import DiscoverScroll from "./components/DiscoverScroll";
-import ScrollButton from "./components/ScrollButton";
+import HomeBannerSlider from "./components/HomeBannerSlider";
 
 // import CheckMobile from "../components/CheckMobile";
 // Register the ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const abtBg = {
   backgroundImage: "url(images/abt_bg.png)",
@@ -51,140 +45,24 @@ const Home = async () => {
   const addressdata = await apiService.getacfData("acf/v1/options/");
   const addrsData = addressdata.address_list;
 
-  // const sectionRef = useRef(null);
-  // const pinColumnRef = useRef(null);
-  // const scrollColumnRef = useRef(null);
-
-  // useLayoutEffect(() => {
-  //   const section = sectionRef.current;
-  //   const pinColumn = pinColumnRef.current;
-  //   const scrollColumn = scrollColumnRef.current;
-
-  //   if (section && pinColumn && scrollColumn) {
-  //     // Create GSAP scroll animation
-  //     gsap.to(scrollColumn, {
-  //       y: () => window.innerHeight - scrollColumn.clientHeight,
-  //       ease: "none",
-  //       scrollTrigger: {
-  //         trigger: section,
-  //         pin: true,
-  //         pinSpacing: "margin",
-  //         // pinSpacing: false,
-  //         start: "top top",
-  //         endTrigger: scrollColumn,
-  //         end: "bottom bottom",
-  //         // end: `+=${section.offsetHeight}`,
-  //         scrub: true,
-  //         // markers: true, // Enable markers for debugging
-  //         invalidateOnRefresh: true,
-  //       },
-  //     });
-  //   }
-
-  //   // Cleanup the ScrollTrigger when the component unmounts
-  //   // Cleanup the ScrollTrigger when the component unmounts
-  //   return () => {
-  //     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-  //   };
-  // }, [pageData?.discover_repeater]);
-
-  // const [windowWidth, setWindowWidth] = useState(0);
-  // useEffect(() => {
-  //   setWindowWidth(window.innerWidth); // Set initial window width
-  //   const handleResize = () => {
-  //     setWindowWidth(window.innerWidth);
-  //   };
-  //   window.addEventListener("resize", handleResize); // Clean up the event listener on component unmount
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
-
-  // useEffect(function () {
-  //   function isTouchDevice() {
-  //     return (
-  //       "ontouchstart" in window || // Checks for touch events
-  //       navigator.maxTouchPoints > 0 || // Checks for touch points (modern devices)
-  //       navigator.msMaxTouchPoints > 0 // Checks for touch points (older Microsoft devices)
-  //     );
-  //   }
-
-  //   // Example usage
-  //   if (isTouchDevice()) {
-  //     console.log("This device supports touch.");
-  //     document.body.classList.add("touch-device"); // Add a class for styling
-  //   } else {
-  //     console.log("This device does not support touch.");
-  //     document.body.classList.add("non-touch-device"); // Add a class for styling
-  //   }
-  // }, []);
-
-  // // Fetch page data on component mount
-  // useEffect(() => {
-  //   fetchPagedata();
-  // }, []);
-
   return (
     <>
-      <section
-        className="section-home-hero"
-        // onMouseEnter={() => setIsHovered(true)}
-        // onMouseLeave={() => setIsHovered(false)}
-      >
-        {/* <CustomCursor isHovered={isHovered} /> */}
-        <div className="container-fluid">
-          <div className="row align-items-center">
-            <div className="col-md-6 ps-md-5 order-2 order-md-1">
-              <h1
-                dangerouslySetInnerHTML={{
-                  __html: pageData.banner_title,
-                }}
-              ></h1>
-              <p>
-                {/* <button className="scroll"></button> */}
-                <ScrollButton sectionId="leader-in-marketing" />
-                <span>{pageData.banner_description}</span>
-              </p>
-              <div
-                className="widgets-container"
-                // onMouseEnter={() => setIsHovered(false)}
-                // onMouseLeave={() => setIsHovered(true)}
-              >
-                {pageData.banner_clutch_data ? (
-                  pageData.banner_clutch_data.map((item, i) => (
-                    <div className="widget" key={i}>
-                      <iframe
-                        width="100%"
-                        height="100%"
-                        src={item.clutch_iframe_link}
-                        title={item.clutch_iframe_title}
-                      ></iframe>
-                    </div>
-                  ))
-                ) : (
-                  <span></span>
-                )}
-              </div>
-            </div>
-            <div className="col-md-6 pe-md-5 order-1 order-md-2">
-              <CustomCursorWrapper>
-                <div
-                  className="video-container"
-                  // onMouseEnter={() => setIsHovered(true)}
-                  // onMouseLeave={() => setIsHovered(false)}
-                >
-                  <video
-                    src={pageData.banner_video}
-                    autoPlay={true}
-                    loop={true}
-                    muted={true}
-                  ></video>
-                </div>
-              </CustomCursorWrapper>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* <div className="widgets-container">
+                      {pageData.banner_clutch_data ? (
+                        pageData.banner_clutch_data.map((item, i) => (
+                          <div className="widget" key={i}>
+                            <iframe
+                              width="100%"
+                              height="100%"
+                              src={item.clutch_iframe_link}
+                              title={item.clutch_iframe_title}
+                            ></iframe>
+                          </div>
+                        ))
+                      ) : (
+                        <span></span>
+                      )}
+                    </div> */}
       {/* <CheckMobile setWidth={768}>
         <section className="pad_cmn_blk">
           <div className="container">
@@ -210,6 +88,8 @@ const Home = async () => {
           </div>
         </section>
       </CheckMobile> */}
+
+      <HomeBannerSlider pageData={pageData} />
 
       <BrandMarket
         title={brandData.brand_section_title}

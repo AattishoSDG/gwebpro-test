@@ -22,10 +22,9 @@ const Footer = async () => {
               </Link>
               <div className="footer_text">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel,
-                  suscipit tempore unde explicabo corrupti veritatis vero. Modi
-                  corporis nulla dolores eum, vel harum cumque animi odit
-                  deleniti numquam natus consequuntur.
+                  G Web Pro is a digital marketing and software development
+                  company that specializes in enhancing our clients’ online
+                  presence through tailored strategies and technical expertise.
                 </p>
               </div>
             </div>
