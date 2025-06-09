@@ -834,4 +834,7 @@ input::placeholder,
 .gwebpro-prose ul,
   .gwebpro-prose ol { padding-left: 18px; }
 .socials_blk > *:last-child { gap: 14px; }
+.inner_DataCard p { font-size: 14px; line-height: 18px; }
+.inner_DataCard { width: 130px; padding: 30px 5px 5px; }
+.tabs-container .tabContent .desc .d-flex { gap: 24px 12px; }
  }

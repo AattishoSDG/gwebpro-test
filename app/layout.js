@@ -3,6 +3,8 @@ import "./styles/style.css";
 import "./styles/res.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Loader from "./components/Loader";
+import { LoaderProvider } from "./components/LoaderContext";
 // import { LoadingProvider } from "./providers/LoadingProvider";
 // import { NavigationEvents } from "./components/NavigationEvents";
 
@@ -34,12 +36,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${DMSans.variable} ${ExoFont.variable}`}>
-        {/* <LoadingProvider> */}
-        <Header />
-        {children}
-        {/* <NavigationEvents /> */}
-        <Footer />
-        {/* </LoadingProvider> */}
+        <LoaderProvider>
+          <Loader />
+          {/* <LoadingProvider> */}
+          <Header />
+          {children}
+          {/* <NavigationEvents /> */}
+          <Footer />
+          {/* </LoadingProvider> */}
+        </LoaderProvider>
       </body>
     </html>
   );

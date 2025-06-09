@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+// import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 // import { Link, useLocation } from "react-router-dom";
@@ -10,6 +10,8 @@ import Tab from "react-bootstrap/Tab";
 
 import useScrollDirection from "../hooks/useScrollDirection";
 import useIsScrolled from "../hooks/useIsScrolled";
+import LoaderLinks from "./LoaderLinks";
+import Link from "next/link";
 
 const HeaderNav = ({ headerData }) => {
   const [isHoveringSubmenu, setIsHoveringSubmenu] = useState(false);
@@ -45,6 +47,11 @@ const HeaderNav = ({ headerData }) => {
     e.preventDefault();
     setShowMegaMenu((is) => !is);
   }
+  function CloseMobileMenu(e) {
+    e.stopPropagation();
+    setActiveIndex(null);
+    setIsMobileMenuOpen(false);
+  }
   return (
     <div
       className={`menu-fixed-wrapper ${
@@ -57,22 +64,24 @@ const HeaderNav = ({ headerData }) => {
         <nav>
           <div className="container-fluid header_nav d-flex align-items-center justify-content-between">
             <div className="logo">
-              <Link href="/">
+              <LoaderLinks href="/">
                 <Logo />
-              </Link>
+              </LoaderLinks>
             </div>
 
             <div className="navmenu_mid">
               <ul>
                 <li>
-                  <span onClick={handleMegaMenuToggle}>Services</span>
+                  <span>Services</span>
+                  {/* onClick={handleMegaMenuToggle} */}
                   <div
                     // className={`sub-menu ${
                     //   scrollDirection === "down" ? "hide" : "show"
                     // }`}
-                    className={`sub-menu ${
-                      showMegaMenu ? "sub-menu-open" : ""
-                    }`}
+                    // ${
+                    //   showMegaMenu ? "sub-menu-open" : ""
+                    // }
+                    className={`sub-menu`}
                   >
                     <div className="container-fluid sub-menu-container scrollable-div">
                       <Tab.Container defaultActiveKey={0}>
@@ -132,9 +141,9 @@ const HeaderNav = ({ headerData }) => {
                                   <div className="col">
                                     <div className="sub-menu-title">
                                       <p>Software Development</p>
-                                      <Link href="/services">
+                                      <LoaderLinks href="/services">
                                         Explore More <span></span>
-                                      </Link>
+                                      </LoaderLinks>
                                     </div>
                                   </div>
                                 </div>
@@ -142,158 +151,158 @@ const HeaderNav = ({ headerData }) => {
                                   <div className="col">
                                     <div className="title">
                                       <p>
-                                        <Link href="/services-level-two">
+                                        <LoaderLinks href="/services-level-two">
                                           Development
-                                        </Link>
+                                        </LoaderLinks>
                                       </p>
                                     </div>
                                     <ul className="sub-links">
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           Digital Experience Development
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           Ecommerce Development
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           Website Development
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           Mobile App Development
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           Web Infrastructure & Maintenance
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           Content Management Systems
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           AI & GPT Integration
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           ADA Compliance Services
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                     </ul>
                                   </div>
                                   <div className="col">
                                     <div className="title">
                                       <p>
-                                        <Link href="/services-level-two">
+                                        <LoaderLinks href="/services-level-two">
                                           Software Solutions
-                                        </Link>
+                                        </LoaderLinks>
                                       </p>
                                     </div>
                                     <ul className="sub-links">
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           Artificial Intelligence
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           AR / VR
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           Autodesk
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           Biometrics
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           Business Intelligence & Analytics
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           Cloud
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           CRM
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           Database
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           Document Management
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           Embedded Software
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           ERP
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           IT Service Management
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           Kiosk
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                     </ul>
                                   </div>
                                   <div className="col">
                                     <div className="title">
                                       <p>
-                                        <Link href="/services-level-two">
+                                        <LoaderLinks href="/services-level-two">
                                           Design
-                                        </Link>
+                                        </LoaderLinks>
                                       </p>
                                     </div>
                                     <ul className="sub-links">
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           Website Design
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           Social Media Design
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           Ecommerce Website Design
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                       <li>
-                                        <Link href="/services-level-three">
+                                        <LoaderLinks href="/services-level-three">
                                           Email Marketing Testing & Design
-                                        </Link>
+                                        </LoaderLinks>
                                       </li>
                                     </ul>
                                   </div>
@@ -310,7 +319,7 @@ const HeaderNav = ({ headerData }) => {
                   </div>
                 </li>
                 <li>
-                  <Link href="/about">About Us</Link>
+                  <LoaderLinks href="/about">About Us</LoaderLinks>
                   <div
                     // className={`sub-menu ${
                     //   scrollDirection === "down" ? "hide" : "show"
@@ -321,27 +330,27 @@ const HeaderNav = ({ headerData }) => {
 
                     <ul>
                       <li>
-                        <Link href="/portfolio">Portfolio</Link>
+                        <LoaderLinks href="/portfolio">Portfolio</LoaderLinks>
                       </li>
                       <li>
-                        <Link href="/seo-detail">SEO Detail</Link>
+                        <LoaderLinks href="/seo-detail">SEO Detail</LoaderLinks>
                       </li>
                       <li>
-                        <Link href="/web-detail">Web Detail</Link>
+                        <LoaderLinks href="/web-detail">Web Detail</LoaderLinks>
                       </li>
                       <li>
-                        <Link href="/blog">Blog</Link>
+                        <LoaderLinks href="/blog">Blog</LoaderLinks>
                       </li>
                       {/* <li>
-                        <Link href="/about">
+                        <LoaderLinks href="/about">
                           Learn About GWebPro Marketing Inc.
-                        </Link>
+                        </LoaderLinks>
                       </li> */}
                     </ul>
                   </div>
                 </li>
                 <li>
-                  <Link href="/contact">Contact</Link>
+                  <LoaderLinks href="/contact">Contact</LoaderLinks>
                 </li>
               </ul>
             </div>
@@ -349,7 +358,7 @@ const HeaderNav = ({ headerData }) => {
             <div className="navmenu_end">
               <ul>
                 {/* <li>
-                  <Link href="/contact">Get a Quote</Link>
+                  <LoaderLinks href="/contact">Get a Quote</LoaderLinks>
                 </li> */}
                 <li>
                   <a
@@ -375,7 +384,7 @@ const HeaderNav = ({ headerData }) => {
         <nav>
           <div className="container-fluid header_nav d-flex align-items-center justify-content-between">
             <div className="logo">
-              <Link href="/">
+              <Link href="/" onClick={CloseMobileMenu}>
                 <Logo />
               </Link>
             </div>
@@ -411,7 +420,10 @@ const HeaderNav = ({ headerData }) => {
                           <div className="accordion">
                             <div className="accordion_item active">
                               <div className="accordion_title">
-                                <Link href="/services">
+                                <Link
+                                  href="/services"
+                                  onClick={CloseMobileMenu}
+                                >
                                   Digital Marketing Services
                                 </Link>
                               </div>
@@ -430,7 +442,10 @@ const HeaderNav = ({ headerData }) => {
                             </div>
                             <div className="accordion_item active">
                               <div className="accordion_title">
-                                <Link href="/services">
+                                <Link
+                                  href="/services"
+                                  onClick={CloseMobileMenu}
+                                >
                                   Software Development
                                 </Link>
                               </div>
@@ -442,49 +457,76 @@ const HeaderNav = ({ headerData }) => {
                                       <div className="col">
                                         <div className="title">
                                           <p>
-                                            <Link href="/services-level-two">
+                                            <Link
+                                              href="/services-level-two"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Development
                                             </Link>
                                           </p>
                                         </div>
                                         <ul className="sub-links">
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Digital Experience Development
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Ecommerce Development
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Website Development
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Mobile App Development
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Web Infrastructure & Maintenance
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Content Management Systems
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               AI & GPT Integration
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               ADA Compliance Services
                                             </Link>
                                           </li>
@@ -493,74 +535,116 @@ const HeaderNav = ({ headerData }) => {
                                       <div className="col">
                                         <div className="title">
                                           <p>
-                                            <Link href="/services-level-two">
+                                            <Link
+                                              href="/services-level-two"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Software Solutions
                                             </Link>
                                           </p>
                                         </div>
                                         <ul className="sub-links">
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Artificial Intelligence
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               AR / VR
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Autodesk
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Biometrics
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Business Intelligence & Analytics
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Cloud
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               CRM
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Database
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Document Management
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Embedded Software
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               ERP
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               IT Service Management
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Kiosk
                                             </Link>
                                           </li>
@@ -569,29 +653,44 @@ const HeaderNav = ({ headerData }) => {
                                       <div className="col">
                                         <div className="title">
                                           <p>
-                                            <Link href="/services-level-two">
+                                            <Link
+                                              href="/services-level-two"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Design
                                             </Link>
                                           </p>
                                         </div>
                                         <ul className="sub-links">
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Website Design
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Social Media Design
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Ecommerce Website Design
                                             </Link>
                                           </li>
                                           <li>
-                                            <Link href="/services-level-three">
+                                            <Link
+                                              href="/services-level-three"
+                                              onClick={CloseMobileMenu}
+                                            >
                                               Email Marketing Testing & Design
                                             </Link>
                                           </li>
@@ -604,7 +703,12 @@ const HeaderNav = ({ headerData }) => {
                             </div>
                             <div className="accordion_item active">
                               <div className="accordion_title">
-                                <Link href="/services">Consulting</Link>
+                                <Link
+                                  href="/services"
+                                  onClick={CloseMobileMenu}
+                                >
+                                  Consulting
+                                </Link>
                               </div>
                               <div className="collapsible">
                                 <div className="hidden">
@@ -635,7 +739,9 @@ const HeaderNav = ({ headerData }) => {
                       style={{ cursor: "pointer" }}
                     >
                       <div>
-                        <Link href="/about">About Us</Link>
+                        <Link href="/about" onClick={CloseMobileMenu}>
+                          About Us
+                        </Link>
                       </div>
                       <span></span>
                     </div>
@@ -644,16 +750,30 @@ const HeaderNav = ({ headerData }) => {
                         <div className="accordion_content">
                           <ul>
                             <li>
-                              <Link href="/portfolio">Portfolio</Link>
+                              <Link href="/portfolio" onClick={CloseMobileMenu}>
+                                Portfolio
+                              </Link>
                             </li>
                             <li>
-                              <Link href="/seo-detail">SEO Detail</Link>
+                              <Link
+                                href="/seo-detail"
+                                onClick={CloseMobileMenu}
+                              >
+                                SEO Detail
+                              </Link>
                             </li>
                             <li>
-                              <Link href="/web-detail">Web Detail</Link>
+                              <Link
+                                href="/web-detail"
+                                onClick={CloseMobileMenu}
+                              >
+                                Web Detail
+                              </Link>
                             </li>
                             <li>
-                              <Link href="/blog">Blog</Link>
+                              <Link href="/blog" onClick={CloseMobileMenu}>
+                                Blog
+                              </Link>
                             </li>
                           </ul>
                         </div>
@@ -671,7 +791,9 @@ const HeaderNav = ({ headerData }) => {
                       style={{ cursor: "pointer" }}
                     >
                       <div>
-                        <Link href="/contact">Contact</Link>
+                        <Link href="/contact" onClick={CloseMobileMenu}>
+                          Contact
+                        </Link>
                       </div>
                     </div>
                     {/* <div className={`collapsible`}>
@@ -686,13 +808,14 @@ const HeaderNav = ({ headerData }) => {
                 <div className="navmenu_end">
                   <ul>
                     {/* <li>
-                      <Link href="/contact">Get a Quote</Link>
+                      <LoaderLinks href="/contact">Get a Quote</LoaderLinks>
                     </li> */}
                     <li>
                       <a
                         href="https://docs.google.com/forms/d/e/1FAIpQLSfyIGXnukYa9Cybk3NeHk4gC4F44U5o66GUMi9umkkaFi2V2w/viewform"
                         target="_blank"
                         rel="nofollow"
+                        onClick={CloseMobileMenu}
                       >
                         Request For Proposal
                       </a>

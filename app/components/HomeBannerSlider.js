@@ -6,31 +6,41 @@ import CustomCursorWrapper from "./CustomCursor";
 import ScrollButton from "./ScrollButton";
 import CheckMobile from "./CheckMobile";
 import CheckScreenWidth from "./CheckScreenWidth";
+import Link from "next/link";
+import Image from "next/image";
 
 const slidesData = [
   {
     id: 1,
-    title: "First Slide Title",
-    description: "First slide description",
+    title:
+      "Professional <span>Digital Marketing Agency</span> in Toronto for Your Business",
+    description:
+      "We offer complete digital marketing services for businesses of all sizes. As a leading digital marketing company in Toronto, our team helps you set up websites, run online ads, manage SEO, and create social media plans. We use the best methods to promote your business online. Every service is planned carefully to match your needs.",
     // videoUrl: "/videos/slide1.mp4",
     linkUrl: "/page1",
-    cursorText: "/images/gwebpro-red-circle.png",
+    // cursorText: "/images/gwebpro-red-circle.png",
+    cursorText: "/images/custom-cursor-text.svg",
   },
   {
     id: 2,
-    title: "Second Slide Title",
-    description: "Second slide description",
+    title:
+      "A <span>Custom Software Development</span> Company in Toronto You Can Rely On",
+    description:
+      "We design and develop software to meet your business needs. As a top software development company in Toronto, our services include website development, CMS creation, and custom apps. Our team works with you at every step of development to ensure smooth delivery of your project. We focus on making practical and easy-to-use solutions that fit your business goals.",
     // videoUrl: "/videos/slide2.mp4",
     linkUrl: "/page2",
-    cursorText: "/images/gwebpro-blue-circle.png",
+    // cursorText: "/images/gwebpro-blue-circle.png",
+    cursorText: "/images/custom-cursor-text.svg",
   },
   {
     id: 3,
-    title: "Third Slide Title",
-    description: "Third slide description",
+    title: "<span>Consulting Services</span> to Plan Your Digital Strategy",
+    description:
+      "We offer consulting services to guide your business’s digital plans. Our team listens to your needs and suggests the best approach. As a trusted management consulting firm in Toronto, we help you make informed choices for marketing, website design, and software development. Every plan is built with care, based on your business goals and budget.",
     // videoUrl: "/videos/slide3.mp4",
     linkUrl: "/page3",
-    cursorText: "/images/gwebpro-green-circle.png",
+    // cursorText: "/images/gwebpro-green-circle.png",
+    cursorText: "/images/custom-cursor-text.svg",
   },
 ];
 
@@ -69,6 +79,7 @@ export default function HomeBannerSlider({ pageData }) {
                   disableOnInteraction: false, // Continue autoplay after user interactions
                   pauseOnMouseEnter: true, // Pause when mouse enters slider
                 }}
+                autoHeight={true}
                 // loop={true}
               >
                 {/* <SwiperSlide>
@@ -98,7 +109,11 @@ export default function HomeBannerSlider({ pageData }) {
                 {slidesData.map((e, i) => {
                   return (
                     <SwiperSlide key={i}>
-                      <h1>{e.title}</h1>
+                      <h1
+                        dangerouslySetInnerHTML={{
+                          __html: e.title,
+                        }}
+                      ></h1>
                     </SwiperSlide>
                   );
                 })}
@@ -109,6 +124,7 @@ export default function HomeBannerSlider({ pageData }) {
                   modules={[Controller]}
                   onSwiper={setDescSwiper}
                   controller={{ control: titleSwiper }}
+                  autoHeight={true}
                 >
                   {/* <SwiperSlide>
                     <p>{pageData.banner_description}</p>
@@ -128,6 +144,39 @@ export default function HomeBannerSlider({ pageData }) {
                     );
                   })}
                 </Swiper>
+              </div>
+              <div className="d-flex align-items-center justify-content-center">
+                <CheckMobile setWidth={768}>
+                  <Link
+                    className="custom-cursor active position-static"
+                    style={{ transform: "unset" }}
+                    href={slidesData[activeSlide].linkUrl}
+                  >
+                    {/* "/images/custom-cursor-text.svg" */}
+                    <Image
+                      src={slidesData[activeSlide].cursorText}
+                      alt=""
+                      width={180}
+                      height={180}
+                    />
+                  </Link>
+                </CheckMobile>
+              </div>
+              <div className="widgets-container">
+                {pageData.banner_clutch_data ? (
+                  pageData.banner_clutch_data.map((item, i) => (
+                    <div className="widget" key={i}>
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src={item.clutch_iframe_link}
+                        title={item.clutch_iframe_title}
+                      ></iframe>
+                    </div>
+                  ))
+                ) : (
+                  <span></span>
+                )}
               </div>
             </div>
             <div className="col-md-6 pe-md-5 order-1 order-md-2">
