@@ -71,7 +71,7 @@ export default function WebQuestionnaireForm() {
     return(
     <>
          <div className="contact-form form-questionnaires">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} >
                   <div className="row">
                     <div className="col-12">
                       <p>
@@ -227,9 +227,7 @@ export default function WebQuestionnaireForm() {
                           <button type="submit">Submit</button>
                        )}
                     </div>
-
                     <div className="col-12"> {status && <p style={{ color: 'green' }}>{status}</p>}</div>
-
                   </div>
                 </form>
               </div>
