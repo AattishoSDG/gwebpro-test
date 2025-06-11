@@ -9,46 +9,15 @@ import CheckScreenWidth from "./CheckScreenWidth";
 import Link from "next/link";
 import Image from "next/image";
 
-const slidesData = [
-  {
-    id: 1,
-    title:
-      "Professional <span>Digital Marketing Agency</span> in Toronto for Your Business",
-    description:
-      "We offer complete digital marketing services for businesses of all sizes. As a leading digital marketing company in Toronto, our team helps you set up websites, run online ads, manage SEO, and create social media plans. We use the best methods to promote your business online. Every service is planned carefully to match your needs.",
-    // videoUrl: "/videos/slide1.mp4",
-    linkUrl: "/page1",
-    // cursorText: "/images/gwebpro-red-circle.png",
-    cursorText: "/images/custom-cursor-text.svg",
-  },
-  {
-    id: 2,
-    title:
-      "A <span>Custom Software Development</span> Company in Toronto You Can Rely On",
-    description:
-      "We design and develop software to meet your business needs. As a top software development company in Toronto, our services include website development, CMS creation, and custom apps. Our team works with you at every step of development to ensure smooth delivery of your project. We focus on making practical and easy-to-use solutions that fit your business goals.",
-    // videoUrl: "/videos/slide2.mp4",
-    linkUrl: "/page2",
-    // cursorText: "/images/gwebpro-blue-circle.png",
-    cursorText: "/images/custom-cursor-text.svg",
-  },
-  {
-    id: 3,
-    title: "<span>Consulting Services</span> to Plan Your Digital Strategy",
-    description:
-      "We offer consulting services to guide your business’s digital plans. Our team listens to your needs and suggests the best approach. As a trusted management consulting firm in Toronto, we help you make informed choices for marketing, website design, and software development. Every plan is built with care, based on your business goals and budget.",
-    // videoUrl: "/videos/slide3.mp4",
-    linkUrl: "/page3",
-    // cursorText: "/images/gwebpro-green-circle.png",
-    cursorText: "/images/custom-cursor-text.svg",
-  },
-];
 
 export default function HomeBannerSlider({ pageData }) {
   const [activeSlide, setActiveSlide] = useState(0);
   // In HomeBannerSlider component
   const [titleSwiper, setTitleSwiper] = useState(null);
   const [descSwiper, setDescSwiper] = useState(null);
+
+  const bannerContent= pageData.banner_repeater;
+
 
   // Set up controller relationship
   // useEffect(() => {
@@ -106,12 +75,12 @@ export default function HomeBannerSlider({ pageData }) {
                     }}
                   ></h1>
                 </SwiperSlide> */}
-                {slidesData.map((e, i) => {
+                {bannerContent.map((e, i) => {
                   return (
                     <SwiperSlide key={i}>
                       <h1
                         dangerouslySetInnerHTML={{
-                          __html: e.title,
+                          __html: e.banner_repeater_title,
                         }}
                       ></h1>
                     </SwiperSlide>
@@ -136,10 +105,10 @@ export default function HomeBannerSlider({ pageData }) {
                     <p>{pageData.banner_description}</p>
                   </SwiperSlide> */}
 
-                  {slidesData.map((e, i) => {
+                  {bannerContent.map((e, i) => {
                     return (
                       <SwiperSlide key={i}>
-                        <p>{e.description}</p>
+                        <p>{e.banner_repeater_description}</p>
                       </SwiperSlide>
                     );
                   })}
@@ -150,11 +119,11 @@ export default function HomeBannerSlider({ pageData }) {
                   <Link
                     className="custom-cursor active position-static"
                     style={{ transform: "unset" }}
-                    href={slidesData[activeSlide].linkUrl}
+                    href={bannerContent[activeSlide].banner_repeater_link}
                   >
                     {/* "/images/custom-cursor-text.svg" */}
                     <Image
-                      src={slidesData[activeSlide].cursorText}
+                      src={bannerContent[activeSlide].banner_repeater_cursor_img}
                       alt=""
                       width={180}
                       height={180}
@@ -182,9 +151,9 @@ export default function HomeBannerSlider({ pageData }) {
             <div className="col-md-6 pe-md-5 order-1 order-md-2">
               <CheckScreenWidth setWidth={767}>
                 <CustomCursorWrapper
-                  cursorText={slidesData[activeSlide].cursorText}
+                  cursorText={bannerContent[activeSlide].banner_repeater_cursor_img}
                 >
-                  <a href={slidesData[activeSlide].linkUrl}>
+                  <a href={bannerContent[activeSlide].banner_repeater_link}>
                     <div className="video-container">
                       <video
                         src={
