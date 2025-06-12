@@ -42,10 +42,11 @@ export default async function About() {
             <div className="col text-center">
               <div className="banner-content">
                 <div className="position-relative title_blk">
-                  <h1 dangerouslySetInnerHTML={{
-                        __html: pageData.about_banner_title,
-                      }}>
-                   </h1>
+                  <h1
+                    dangerouslySetInnerHTML={{
+                      __html: pageData.about_banner_title,
+                    }}
+                  ></h1>
                 </div>
                 <CheckScreenWidth setWidth={991}>
                   <div className="video-container">
@@ -69,29 +70,25 @@ export default async function About() {
             {/* <CheckScreenWidth setWidth={991}> */}
             <div className="col-lg-5">
               <div className="gwebpro-logo">
-                <video
-                  src={pageData.logo_bg_video}
-                  autoPlay
-                  muted
-                  loop
-                ></video>
+                <video src={pageData.logo_bg_video} autoPlay muted loop></video>
                 <LogoGwebproLetterG />
               </div>
             </div>
             {/* </CheckScreenWidth> */}
             <div className="col-lg-6 offset-xl-1">
               <div className="title_blk">
-                <h2 dangerouslySetInnerHTML={{
-                        __html: pageData.about_section_title,
-                      }}>
-                  
-                </h2>
+                <h2
+                  dangerouslySetInnerHTML={{
+                    __html: pageData.about_section_title,
+                  }}
+                ></h2>
               </div>
               <div className="title_blk">
-                <p dangerouslySetInnerHTML={{
-                        __html: pageData.about_section_content,
-                      }}>
-                </p>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: pageData.about_section_content,
+                  }}
+                ></p>
               </div>
             </div>
           </div>
@@ -110,16 +107,16 @@ export default async function About() {
                     height={105}
                   />
                 </div>
-                <h2 dangerouslySetInnerHTML={{
-                        __html: pageData.google_ranking_title,
-                      }}>
-                 
-                </h2>
-                <p dangerouslySetInnerHTML={{
-                        __html: pageData.google_ranking_description,
-                      }}>
-                 
-                </p>
+                <h2
+                  dangerouslySetInnerHTML={{
+                    __html: pageData.google_ranking_title,
+                  }}
+                ></h2>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: pageData.google_ranking_description,
+                  }}
+                ></p>
               </div>
             </div>
             <div className="col-md-6">
@@ -154,7 +151,10 @@ export default async function About() {
                   // controls={isPlaying}
                   // ref={videoRef}
                 ></video> */}
-                <AboutPageVideoPlayer goal_video_thumbnail={pageData.goal_video_thumbnail} goal_video={pageData.goal_video}/>
+                <AboutPageVideoPlayer
+                  goal_video_thumbnail={pageData.goal_video_thumbnail}
+                  goal_video={pageData.goal_video}
+                />
               </div>
             </div>
             <div className="col-lg-7">
@@ -178,13 +178,17 @@ export default async function About() {
             <div className="col">
               <div className="title_blk has-btn-grp has-dark-bg">
                 <h2>{pageData.focus_title}</h2>
-                <p dangerouslySetInnerHTML={{
-                        __html: pageData.focus_description,
-                      }}>
-                 
-                </p>
-                <Link href={pageData.focus_button_1_link}>{pageData.focus_button_1_title}</Link>
-                <Link href={pageData.focus_button_2_link}>{pageData.focus_button_2_title}</Link>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: pageData.focus_description,
+                  }}
+                ></p>
+                <Link href={pageData.focus_button_1_link}>
+                  {pageData.focus_button_1_title}
+                </Link>
+                <Link href={pageData.focus_button_2_link}>
+                  {pageData.focus_button_2_title}
+                </Link>
               </div>
               {/* <div className="btn-group"></div> */}
             </div>
@@ -196,48 +200,46 @@ export default async function About() {
           <div className="row">
             <div className="col-md-6">
               <div className="title_blk">
-                <h2 dangerouslySetInnerHTML={{
-                        __html: pageData.left_side_title,
-                      }}>
-                 
-                </h2>
-                <p dangerouslySetInnerHTML={{
-                        __html: pageData.left_side_content,
-                      }}>
-                 
-                </p>
+                <h2
+                  dangerouslySetInnerHTML={{
+                    __html: pageData.left_side_title,
+                  }}
+                ></h2>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: pageData.left_side_content,
+                  }}
+                ></p>
               </div>
             </div>
             <div className="col-md-6">
               <div className="title_blk">
-                <h2 dangerouslySetInnerHTML={{
-                        __html: pageData.right_side_title,
-                      }}>
-                 
-                </h2>
-                <p dangerouslySetInnerHTML={{
-                        __html: pageData.right_side_content,
-                      }}>
-                
-                </p>
+                <h2
+                  dangerouslySetInnerHTML={{
+                    __html: pageData.right_side_title,
+                  }}
+                ></h2>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: pageData.right_side_content,
+                  }}
+                ></p>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col">
               <div className="accomplishments">
-              
-               {pageData.partner_logo_list.map((tab, i) => (
-                <div className="img" key={i}>
-                  <Image
-                    src={tab.partner_logo.url}
-                    alt={tab.partner_logo.alt}
-                    width={167}
-                    height={134}
-                  />
-                </div>
+                {pageData.partner_logo_list.map((tab, i) => (
+                  <div className="img" key={i}>
+                    <Image
+                      src={tab.partner_logo.url}
+                      alt={tab.partner_logo.alt}
+                      width={167}
+                      height={134}
+                    />
+                  </div>
                 ))}
-               
               </div>
             </div>
           </div>
@@ -246,7 +248,7 @@ export default async function About() {
       <section className="section-industry-leadership pad_cmn_blk">
         <div className="container">
           <div className="row">
-            <div className="col-md-5">
+            <div className="col-md-5 position-relative">
               <div className="floating-img">
                 <Image
                   src={pageData.photo_bdm}
@@ -258,17 +260,18 @@ export default async function About() {
             </div>
             <div className="col-md-7">
               <div className="title_blk">
-                <h2  dangerouslySetInnerHTML={{
-                        __html: pageData.title_bdm,
-                      }}>
-                </h2>
+                <h2
+                  dangerouslySetInnerHTML={{
+                    __html: pageData.title_bdm,
+                  }}
+                ></h2>
               </div>
-              <div className="title_blk" dangerouslySetInnerHTML={{
-                        __html: pageData.description_bdm,
-                      }}>
-                
-                
-              </div>
+              <div
+                className="title_blk"
+                dangerouslySetInnerHTML={{
+                  __html: pageData.description_bdm,
+                }}
+              ></div>
             </div>
           </div>
         </div>
@@ -284,26 +287,22 @@ export default async function About() {
           </div>
           <CheckScreenWidth setWidth={991}>
             <div className="row gy-4">
-
-            {pageData.promise_repeater.map((item, k) => (
-              <div className="col-md-6 col-lg-4" key={k}>
-                <div className="card-you_get">
-                  <div className="icon">
-                    <Image
-                      src={item.promise_icon.url}
-                      width={84}
-                      height={84}
-                      alt={item.promise_icon.alt}
-                    />
+              {pageData.promise_repeater.map((item, k) => (
+                <div className="col-md-6 col-lg-4" key={k}>
+                  <div className="card-you_get">
+                    <div className="icon">
+                      <Image
+                        src={item.promise_icon.url}
+                        width={84}
+                        height={84}
+                        alt={item.promise_icon.alt}
+                      />
+                    </div>
+                    <p className="title">{item.promise_title}</p>
+                    <p className="text">{item.promise_description}</p>
                   </div>
-                  <p className="title">{item.promise_title}</p>
-                  <p className="text">
-                    {item.promise_description}
-                  </p>
                 </div>
-              </div>
-               ))}
-
+              ))}
             </div>
           </CheckScreenWidth>
           <CheckMobile setWidth={992}>
@@ -388,11 +387,16 @@ export default async function About() {
                 <h2>{pageData.featured_in_heading}</h2>
               </div>
               <div className="featured-in-brands">
-              {pageData.featured_in_repeater.map((row, l) => (
-                <div className="brand-logo" key={l}>
-                  <Image src={row.logo_featured_id.url} alt={row.logo_featured_id.alt} width={96} height={35} />
-                </div>
-                 ))}
+                {pageData.featured_in_repeater.map((row, l) => (
+                  <div className="brand-logo" key={l}>
+                    <Image
+                      src={row.logo_featured_id.url}
+                      alt={row.logo_featured_id.alt}
+                      width={96}
+                      height={35}
+                    />
+                  </div>
+                ))}
 
                 {/* <div className="brand-logo">
                   <Image
@@ -442,8 +446,6 @@ export default async function About() {
                     height={28}
                   />
                 </div> */}
-
-
               </div>
             </div>
           </div>
@@ -455,7 +457,9 @@ export default async function About() {
             <div className="col has-btn-grp has-btn-single">
               <p>Service With US</p>
               <h2>{pageData.heading_service_with}</h2>
-              <Link href={pageData.button_link_service_with} target="_blank">{pageData.button_title_service_with}</Link>
+              <Link href={pageData.button_link_service_with} target="_blank">
+                {pageData.button_title_service_with}
+              </Link>
             </div>
           </div>
         </div>

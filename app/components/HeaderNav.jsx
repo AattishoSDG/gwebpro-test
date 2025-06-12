@@ -134,7 +134,162 @@ const HeaderNav = ({ headerData }) => {
                           <div className="col-md-8 col-tabs-data">
                             <Tab.Content>
                               <Tab.Pane eventKey={0}>
-                                Digital Marketing Services tab data
+                                <div className="row">
+                                  <div className="col">
+                                    <div className="sub-menu-title">
+                                      <p>Digital Marketing Services</p>
+                                      <LoaderLinks href="/services">
+                                        Explore More <span></span>
+                                      </LoaderLinks>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="row row-cols-2 row-cols-lg-3">
+                                  <div className="col">
+                                    <div className="title">
+                                      <p>
+                                        <LoaderLinks href="/services-level-two">
+                                          SEO Services
+                                        </LoaderLinks>
+                                      </p>
+                                    </div>
+                                    <ul className="sub-links">
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          Local SEO
+                                        </LoaderLinks>
+                                      </li>
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          Generative Engine Optimization
+                                        </LoaderLinks>
+                                      </li>
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          eCommerce SEO
+                                        </LoaderLinks>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div className="col">
+                                    <div className="title">
+                                      <p>
+                                        <LoaderLinks href="/services-level-two">
+                                          Paid Media Management
+                                        </LoaderLinks>
+                                      </p>
+                                    </div>
+                                    <ul className="sub-links">
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          Google/Bing Ads
+                                        </LoaderLinks>
+                                      </li>
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          Social Ads
+                                        </LoaderLinks>
+                                      </li>
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          Amazon Strategic Account Management
+                                        </LoaderLinks>
+                                      </li>
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          Amazon Ad Management
+                                        </LoaderLinks>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div className="col">
+                                    <div className="title">
+                                      <p>
+                                        <LoaderLinks href="/services-level-two">
+                                          Social Media
+                                        </LoaderLinks>
+                                      </p>
+                                    </div>
+                                    <ul className="sub-links">
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          Social Media Optimization
+                                        </LoaderLinks>
+                                      </li>
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          Meta
+                                        </LoaderLinks>
+                                      </li>
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          Tiktok
+                                        </LoaderLinks>
+                                      </li>
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          LinkedIn
+                                        </LoaderLinks>
+                                      </li>
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          Twitter
+                                        </LoaderLinks>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div className="col">
+                                    <div className="title">
+                                      <p>
+                                        <LoaderLinks href="/services-level-two">
+                                          Branding & Content
+                                        </LoaderLinks>
+                                      </p>
+                                    </div>
+                                    <ul className="sub-links">
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          Content Strategy
+                                        </LoaderLinks>
+                                      </li>
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          Digital PR
+                                        </LoaderLinks>
+                                      </li>
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          Online Reputation Management
+                                        </LoaderLinks>
+                                      </li>
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          Email Marketing
+                                        </LoaderLinks>
+                                      </li>
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          Guest Posting
+                                        </LoaderLinks>
+                                      </li>
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          Influencer Marketing
+                                        </LoaderLinks>
+                                      </li>
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          Infographics
+                                        </LoaderLinks>
+                                      </li>
+                                      <li>
+                                        <LoaderLinks href="/services-level-three">
+                                          Whitepaper
+                                        </LoaderLinks>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
                               </Tab.Pane>
                               <Tab.Pane eventKey={1}>
                                 <div className="row">
@@ -309,7 +464,81 @@ const HeaderNav = ({ headerData }) => {
                                 </div>
                               </Tab.Pane>
                               <Tab.Pane eventKey={2}>
-                                Consulting tab data
+                                <div className="row">
+                                  <div className="col">
+                                    <div className="sub-menu-title">
+                                      <p>Consulting</p>
+                                      <LoaderLinks href="/services">
+                                        Explore More <span></span>
+                                      </LoaderLinks>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="row row-cols-2 row-cols-lg-3">
+                                  <div className="col">
+                                    <div className="title">
+                                      <p>
+                                        <LoaderLinks href="/services-level-two">
+                                          Digital Product Strategy
+                                        </LoaderLinks>
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div className="col">
+                                    <div className="title">
+                                      <p>
+                                        <LoaderLinks href="/services-level-two">
+                                          Feasibility Analysis & Study
+                                        </LoaderLinks>
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div className="col">
+                                    <div className="title">
+                                      <p>
+                                        <LoaderLinks href="/services-level-two">
+                                          Business Development Consulting
+                                        </LoaderLinks>
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div className="col">
+                                    <div className="title">
+                                      <p>
+                                        <LoaderLinks href="/services-level-two">
+                                          Digital Transformation Consulting
+                                        </LoaderLinks>
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div className="col">
+                                    <div className="title">
+                                      <p>
+                                        <LoaderLinks href="/services-level-two">
+                                          Change Management Consulting
+                                        </LoaderLinks>
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div className="col">
+                                    <div className="title">
+                                      <p>
+                                        <LoaderLinks href="/services-level-two">
+                                          Executive Coaching
+                                        </LoaderLinks>
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div className="col">
+                                    <div className="title">
+                                      <p>
+                                        <LoaderLinks href="/services-level-two">
+                                          Staff Training & Development
+                                        </LoaderLinks>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
                               </Tab.Pane>
                             </Tab.Content>
                           </div>

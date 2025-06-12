@@ -594,6 +594,9 @@ XX-Large
   .gwebpro-prose h4 {
     font-size: 22px;
   }
+  .section-industry-leadership .floating-img {
+    top: unset;
+  }
 }
 @media (max-width: 1199px) {
   /* FOR SCREENS BELOW 1200px */
@@ -813,12 +816,19 @@ XX-Large
   .cta_dark .title_blk p {
     margin-bottom: 40px;
   }
-  .section-industry-leadership .floating-img img {
+  /* .section-industry-leadership .floating-img img {
     position: relative;
     height: auto;
   }
   .section-industry-leadership .floating-img {
     text-align: center;
+  } */
+  .section-industry-leadership .floating-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 0;
   }
   .featured-in-brands > * {
     flex: 0 1 auto;
