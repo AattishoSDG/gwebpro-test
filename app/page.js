@@ -188,7 +188,7 @@ const Home = async () => {
           <ClientSlider clientTab={pageData.happy_client_list} />
 
           <div className="clnt-btn text-center">
-            <Link href="/" className="btn-white">
+            <Link href="/portfolio" className="btn-white">
               View Our Case Studies
             </Link>
           </div>
@@ -211,7 +211,7 @@ const Home = async () => {
         />
 
         <div className="portfolio_btn text-center">
-          <Link href="/">
+          <Link href="/portfolio">
             View All Portfolio <i className="fa-solid fa-arrow-right"></i>
           </Link>
         </div>
