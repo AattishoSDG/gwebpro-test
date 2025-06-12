@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from "react";
 
-import "./CustomCursor.css"; // Import the CSS styles for the cursor
-
 const CustomCursor = ({ isHovered, cursorText }) => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isInIframe, setIsInIframe] = useState(false);

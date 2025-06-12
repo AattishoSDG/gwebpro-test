@@ -1,12 +1,22 @@
 import { DM_Sans, Exo } from "next/font/google";
-import "./styles/style.css";
-import "./styles/res.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
 import { LoaderProvider } from "./components/LoaderContext";
-// import { LoadingProvider } from "./providers/LoadingProvider";
-// import { NavigationEvents } from "./components/NavigationEvents";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "./styles/bootstrap.min.css";
+import "./styles/fontawesome.min.css";
+import "./styles/regular.css";
+import "./styles/brands.css";
+import "./styles/CustomCursor.css";
+import "./styles/style.css";
+import "./styles/res.css";
 
 const DMSans = DM_Sans({
   variable: "--main_font",

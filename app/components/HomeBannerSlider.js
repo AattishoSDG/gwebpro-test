@@ -28,7 +28,6 @@ export default function HomeBannerSlider({ pageData }) {
   // }, [titleSwiper, descSwiper]);
 
   const handleSlideChange = (swiper) => {
-    console.log(swiper);
     setActiveSlide(swiper.activeIndex);
   };
 

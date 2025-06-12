@@ -6,10 +6,7 @@ import { useLoading } from "../providers/LoadingProvider";
 
 export function NavigationEvents() {
   const pathname = usePathname();
-  // const searchParams = useSearchParams();
   const { setIsLoading } = useLoading();
-  console.log(useLoading());
-
   useEffect(() => {
     setIsLoading(true);
     const timer = setTimeout(() => setIsLoading(false), 1000);
