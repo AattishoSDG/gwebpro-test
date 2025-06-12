@@ -19,15 +19,28 @@ import HomeBannerSlider from "./components/HomeBannerSlider";
 // Register the ScrollTrigger plugin
 // gsap.registerPlugin(ScrollTrigger);
 
+export async function generateMetadata() {
+  // Fetch data needed for metadata
+  const data = await apiService.getPagedata("wp/v2/pages/8");
+
+  return {
+    title: data?.yoast_head_json?.title || "G Web Pro",
+    description:
+      data?.yoast_head_json?.description ||
+      "G Web Pro offers digital marketing, software development, and consulting services in Toronto. Businesses trust us for tailored SEO, web design, and e-commerce solutions.",
+    // You can add more metadata from yoast_head_json if needed
+  };
+}
+
 const abtBg = {
-  backgroundImage: "url(images/abt_bg.png)",
+  backgroundImage: "url(/images/abt_bg.png)",
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
 };
 
 const clientBg = {
-  background: "url(images/cliend_bg.jpg) no-repeat",
+  background: "url(/images/cliend_bg.jpg) no-repeat",
   backgroundSize: "cover",
   backgroundAttachment: "fixed",
 };
