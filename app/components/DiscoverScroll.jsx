@@ -68,12 +68,14 @@ export default function DiscoverScroll({ pageData }) {
                 {pageData.discover_repeater.map((row, i) => (
                   <div className="col-md-6" key={i}>
                     <Link className="discover-card" href="/about">
-                      <Image
-                        width={96}
-                        height={96}
-                        src={row.discover_repeater_image}
-                        alt={row.discover_repeater_title}
-                      />
+                      <div className="img-wrapper">
+                        <Image
+                          width={96}
+                          height={96}
+                          src={row.discover_repeater_image}
+                          alt={row.discover_repeater_title}
+                        />
+                      </div>
                       <h4>{row.discover_repeater_title}</h4>
                       <p>{row.discover_repeater_description}</p>
                     </Link>

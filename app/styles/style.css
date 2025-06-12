@@ -2419,6 +2419,9 @@ textarea {
 .address_blk.contact-form-page {
   background-color: #f5f5f5;
 }
+.address_blk.contact-form-page .sticky-location-pin {
+  z-index: unset;
+}
 /* BASIC FORM ELEMENTS END */
 /* CONTACT BLOCK START */
 .contact_blk {
@@ -4127,3 +4130,60 @@ form button:hover {
 .gwebpro-prose .socials_blk > div a {
   text-decoration: none;
 }
+/* TESTING */
+/* 1st in every group of 4 (1st, 5th, 9th, etc.) */
+.discover-cards .slick-track .slick-slide:nth-child(4n + 1) .img-wrapper,
+.discover-cards .row > *:nth-child(4n + 1) .img-wrapper {
+  background-color: #f6e8ce;
+  height: 96px;
+  width: 96px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 16px;
+}
+
+/* 2nd in every group of 4 (2nd, 6th, 10th, etc.) */
+.discover-cards .slick-track .slick-slide:nth-child(4n + 2) .img-wrapper,
+.discover-cards .row > *:nth-child(4n + 2) .img-wrapper {
+  background-color: #d7f6e4;
+  height: 96px;
+  width: 96px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 16px;
+}
+
+/* 3rd in every group of 4 (3rd, 7th, 11th, etc.) */
+.discover-cards .slick-track .slick-slide:nth-child(4n + 3) .img-wrapper,
+.discover-cards .row > *:nth-child(4n + 3) .img-wrapper {
+  background-color: #e0cef8;
+  height: 96px;
+  width: 96px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 16px;
+}
+
+/* 4th in every group of 4 (4th, 8th, 12th, etc.) */
+.discover-cards .slick-track .slick-slide:nth-child(4n + 4) .img-wrapper,
+.discover-cards .row > *:nth-child(4n + 4) .img-wrapper {
+  background-color: #cee3f6;
+  height: 96px;
+  width: 96px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 16px;
+}
+.discover-cards .img-wrapper img {
+  max-width: 48px;
+  margin-bottom: 0;
+}
+/* TESTING */

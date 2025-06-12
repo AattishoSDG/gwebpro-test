@@ -67,12 +67,14 @@ export default function HomeDiscoverSlider({ pageData }) {
                       return (
                         <div className="" key={k}>
                           <Link className="discover-card" href={"/about"}>
-                            <Image
-                              width={96}
-                              height={96}
-                              src={mrow.discover_repeater_image}
-                              alt={mrow.discover_repeater_title}
-                            />
+                            <div className="img-wrapper">
+                              <Image
+                                width={96}
+                                height={96}
+                                src={mrow.discover_repeater_image}
+                                alt={mrow.discover_repeater_title}
+                              />
+                            </div>
                             <h4>{mrow.discover_repeater_title}</h4>
                             <p>{mrow.discover_repeater_description}</p>
                           </Link>

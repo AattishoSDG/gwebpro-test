@@ -309,13 +309,36 @@ XX-Large
     right: auto;
     top: 100%;
     left: 35px; /* margin-top: 24px; */
-    transform: translateY(-50%);
+    transform: unset;
+    top: unset;
+    bottom: unset;
+    left: unset;
+    right: unset;
+    position: static;
+    margin-inline: auto;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 1rem;
+  }
+  .address_card h2 i {
+    width: 50px;
+    height: 50px;
+  }
+  .address_card h2 {
+    font-size: 28px;
+  }
+  .address_card p {
+    font-size: 18px;
+  }
+  .address_card a.add_btn {
+    font-size: 16px;
   }
   .address_card li {
-    max-width: 290px;
-    width: 290px;
+    max-width: 50%;
+    width: auto;
     margin-bottom: 32px;
-    margin-inline: 16px;
+    margin-inline: 0px;
   }
   .footer_sec h2 {
     color: #fff;
@@ -704,19 +727,18 @@ XX-Large
   .add-tabs-container ul li:nth-child(2) {
     margin-left: auto;
   }
-  .address_card a.direction_btn {
-    opacity: 1;
-    bottom: auto;
-    right: auto;
-    top: 100%;
-    left: 35px; /* margin-top: 24px; */
-    transform: translateY(-50%);
-  }
   .address_card li {
-    max-width: 290px;
-    width: 290px;
-    margin-bottom: 32px;
-    margin-inline: 16px;
+    text-align: center;
+    padding: 20px 14px;
+  }
+  .address_card h2:after {
+    left: -14px;
+  }
+  .address_card h2 {
+    flex-direction: column;
+  }
+  .address_card p {
+    font-size: 16px;
   }
   .footer_sec h2 {
     color: #fff;
@@ -1089,20 +1111,7 @@ XX-Large
   .discover-cards .slick-track {
     left: 4vw;
   }
-  .address_card a.direction_btn {
-    opacity: 1;
-    bottom: auto;
-    right: auto;
-    top: 100%;
-    left: 35px; /* margin-top: 24px; */
-    transform: translateY(-50%);
-  }
-  .address_card li {
-    max-width: 290px;
-    width: 290px;
-    margin-bottom: 32px;
-    margin-inline: 16px;
-  }
+
   /* FOR SCREENS BELOW 992px */
   .pad_cmn_blk {
     padding-block: 45px;
@@ -1232,20 +1241,7 @@ XX-Large
   .add-tabs-container ul li:nth-child(2) {
     margin-left: auto;
   }
-  .address_card a.direction_btn {
-    opacity: 1;
-    bottom: auto;
-    right: auto;
-    top: 100%;
-    left: 35px; /* margin-top: 24px; */
-    transform: translateY(-50%);
-  }
-  .address_card li {
-    max-width: 290px;
-    width: 290px;
-    margin-bottom: 32px;
-    margin-inline: 16px;
-  }
+
   .footer_sec h2 {
     color: #fff;
     font-family: "DM Sans";
@@ -1696,6 +1692,44 @@ XX-Large
   .gwebpro-prose li {
     font-size: 15px;
   }
+  .address_card li {
+    max-width: unset;
+    width: auto;
+    margin-right: 16px;
+    text-align: left;
+    padding: 28px 26px;
+    padding-bottom: 50px;
+  }
+  .address_card h2:after {
+    left: -26px;
+  }
+  .address_card h2 {
+    flex-direction: row;
+    /* font-size: 40px; */
+  }
+  /* .address_card h2 i {
+    width: 60px;
+    height: 60px;
+  } */
+  .address_card a.direction_btn {
+    position: absolute;
+    top: 100%;
+    left: 14px;
+    display: inline-block;
+    margin-top: 0;
+    transform: translateY(-50%);
+  }
+  /* .address_card p {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .address_card a.add_btn {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .address_card a.direction_btn {
+    font-size: 18px;
+  } */
 }
 @media (max-width: 767px) {
   .section-home-hero .video-container {
@@ -1837,20 +1871,7 @@ XX-Large
   .add-tabs-container ul li:nth-child(2) {
     margin-left: auto;
   }
-  .address_card a.direction_btn {
-    opacity: 1;
-    bottom: auto;
-    right: auto;
-    top: 100%;
-    left: 35px; /* margin-top: 24px; */
-    transform: translateY(-50%);
-  }
-  .address_card li {
-    max-width: 290px;
-    width: 290px;
-    margin-bottom: 32px;
-    margin-inline: 16px;
-  }
+
   .footer_sec h2 {
     color: #fff;
     font-family: "DM Sans";
@@ -2212,6 +2233,23 @@ XX-Large
   .DataCard_icn img {
     width: 22px;
   }
+  .discover-card {
+    width: 250px;
+    padding-block: 20px;
+    padding-inline: 14px;
+    margin-block: 20px;
+    margin-inline: 10px;
+  }
+  .discover-card h4 {
+    font-size: 18px;
+  }
+  .discover-card p {
+    font-size: 14px;
+  }
+  .discover-card img {
+    width: 74px;
+    height: 74px;
+  }
 }
 @media (max-width: 575px) {
   .pad_cmn_blk {
@@ -2306,6 +2344,7 @@ XX-Large
   }
   .tabs-container ul {
     overflow-x: auto;
+    margin-bottom: 50px;
   }
   .tabs-container ul li {
     min-width: 150px;
@@ -2342,20 +2381,7 @@ XX-Large
   .add-tabs-container ul li:nth-child(2) {
     margin-left: auto;
   }
-  .address_card a.direction_btn {
-    opacity: 1;
-    bottom: auto;
-    right: auto;
-    top: 100%;
-    left: 35px; /* margin-top: 24px; */
-    transform: translateY(-50%);
-  }
-  .address_card li {
-    max-width: 290px;
-    width: 290px;
-    margin-bottom: 32px;
-    margin-inline: 16px;
-  }
+
   .footer_sec h2 {
     color: #fff;
     font-family: "DM Sans";
