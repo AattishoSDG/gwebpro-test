@@ -7,11 +7,11 @@ WORKDIR /app
 # Copy package files and install dependencies
 COPY package*.json ./
 RUN npm install
-RUN npm run build
 
 # Copy the rest of the app files
 COPY . .
 
+RUN npm run build
 # Expose port 3000 to be accessed externally
 EXPOSE 3000
 
