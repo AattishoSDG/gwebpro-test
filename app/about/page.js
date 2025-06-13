@@ -232,11 +232,9 @@ export default async function About() {
               <div className="accomplishments">
                 {pageData.partner_logo_list.map((tab, i) => (
                   <div className="img" key={i}>
-                    <Image
+                    <img
                       src={tab.partner_logo.url}
                       alt={tab.partner_logo.alt}
-                      width={167}
-                      height={134}
                     />
                   </div>
                 ))}
@@ -389,11 +387,9 @@ export default async function About() {
               <div className="featured-in-brands">
                 {pageData.featured_in_repeater.map((row, l) => (
                   <div className="brand-logo" key={l}>
-                    <Image
+                    <img
                       src={row.logo_featured_id.url}
                       alt={row.logo_featured_id.alt}
-                      width={96}
-                      height={35}
                     />
                   </div>
                 ))}

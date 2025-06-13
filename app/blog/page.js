@@ -35,9 +35,9 @@ export default function page() {
       </div>
       <section className="pad_cmn_blk">
         <div className="container">
-          <div className="row gy-5">
-            <div className="col-md-6 col-lg-4">
-              <Link href="/" className="blog-listing-link">
+          <div className="row gy-5 row-cols-1 row-cols-sm-2 row-cols-lg-3">
+            <div className="col">
+              <Link href="/blog/slug" className="blog-listing-link">
                 <div className="blog-listing-card position-relative">
                   <div className="blog-listing-img">
                     <Image
@@ -47,22 +47,22 @@ export default function page() {
                       height={350}
                     />
                   </div>
-                  <div className="blog-listing-title">
+                  <h2 className="blog-listing-title">
                     How to Choose the Best Digital Marketing Course in Kolkata
                     for Your Career Goals
-                  </div>
+                  </h2>
                   <div className="blog-listing-date">
                     <span>May 08</span>, 2025
                   </div>
-                  <div className="blog-listing-text">
+                  <p className="blog-listing-text">
                     Digital marketing is one of the fastest-growing careers.
                     With businesses shifting online a...
-                  </div>
+                  </p>
                 </div>
               </Link>
             </div>
-            <div className="col-md-6 col-lg-4">
-              <Link href="/" className="blog-listing-link">
+            <div className="col">
+              <Link href="/blog/slug" className="blog-listing-link">
                 <div className="blog-listing-card position-relative">
                   <div className="blog-listing-img">
                     <Image
@@ -72,22 +72,22 @@ export default function page() {
                       height={350}
                     />
                   </div>
-                  <div className="blog-listing-title">
+                  <h2 className="blog-listing-title">
                     Why Digital Marketing Training in Kolkata Is Essential for
                     Today’s Job Market
-                  </div>
+                  </h2>
                   <div className="blog-listing-date">
                     <span>May 05</span>, 2025
                   </div>
-                  <div className="blog-listing-text">
+                  <p className="blog-listing-text">
                     In today’s digital world, businesses are shifting online
                     faster than ever. From small lo...
-                  </div>
+                  </p>
                 </div>
               </Link>
             </div>
-            <div className="col-md-6 col-lg-4">
-              <Link href="/" className="blog-listing-link">
+            <div className="col">
+              <Link href="/blog/slug" className="blog-listing-link">
                 <div className="blog-listing-card position-relative">
                   <div className="blog-listing-img">
                     <Image
@@ -97,22 +97,22 @@ export default function page() {
                       height={350}
                     />
                   </div>
-                  <div className="blog-listing-title">
+                  <h2 className="blog-listing-title">
                     Why Digital Marketing Training in Kolkata Is Essential for
                     Today’s Job Market
-                  </div>
+                  </h2>
                   <div className="blog-listing-date">
                     <span>May 05</span>, 2025
                   </div>
-                  <div className="blog-listing-text">
+                  <p className="blog-listing-text">
                     In today’s digital world, businesses are shifting online
                     faster than ever. From small lo...
-                  </div>
+                  </p>
                 </div>
               </Link>
             </div>
-            <div className="col-md-6 col-lg-4">
-              <Link href="/" className="blog-listing-link">
+            <div className="col">
+              <Link href="/blog/slug" className="blog-listing-link">
                 <div className="blog-listing-card position-relative">
                   <div className="blog-listing-img">
                     <Image
@@ -122,22 +122,22 @@ export default function page() {
                       height={350}
                     />
                   </div>
-                  <div className="blog-listing-title">
+                  <h2 className="blog-listing-title">
                     Why Digital Marketing Training in Kolkata Is Essential for
                     Today’s Job Market
-                  </div>
+                  </h2>
                   <div className="blog-listing-date">
                     <span>May 05</span>, 2025
                   </div>
-                  <div className="blog-listing-text">
+                  <p className="blog-listing-text">
                     In today’s digital world, businesses are shifting online
                     faster than ever. From small lo...
-                  </div>
+                  </p>
                 </div>
               </Link>
             </div>
-            <div className="col-md-6 col-lg-4">
-              <Link href="/" className="blog-listing-link">
+            <div className="col">
+              <Link href="/blog/slug" className="blog-listing-link">
                 <div className="blog-listing-card position-relative">
                   <div className="blog-listing-img">
                     <Image
@@ -147,22 +147,22 @@ export default function page() {
                       height={350}
                     />
                   </div>
-                  <div className="blog-listing-title">
+                  <h2 className="blog-listing-title">
                     Why Digital Marketing Training in Kolkata Is Essential for
                     Today’s Job Market
-                  </div>
+                  </h2>
                   <div className="blog-listing-date">
                     <span>May 05</span>, 2025
                   </div>
-                  <div className="blog-listing-text">
+                  <p className="blog-listing-text">
                     In today’s digital world, businesses are shifting online
                     faster than ever. From small lo...
-                  </div>
+                  </p>
                 </div>
               </Link>
             </div>
-            <div className="col-md-6 col-lg-4">
-              <Link href="/" className="blog-listing-link">
+            <div className="col">
+              <Link href="/blog/slug" className="blog-listing-link">
                 <div className="blog-listing-card position-relative">
                   <div className="blog-listing-img">
                     <Image
@@ -172,22 +172,22 @@ export default function page() {
                       height={350}
                     />
                   </div>
-                  <div className="blog-listing-title">
+                  <h2 className="blog-listing-title">
                     Why Digital Marketing Training in Kolkata Is Essential for
                     Today’s Job Market
-                  </div>
+                  </h2>
                   <div className="blog-listing-date">
                     <span>May 05</span>, 2025
                   </div>
-                  <div className="blog-listing-text">
+                  <p className="blog-listing-text">
                     In today’s digital world, businesses are shifting online
                     faster than ever. From small lo...
-                  </div>
+                  </p>
                 </div>
               </Link>
             </div>
-            <div className="col-md-6 col-lg-4">
-              <Link href="/" className="blog-listing-link">
+            <div className="col">
+              <Link href="/blog/slug" className="blog-listing-link">
                 <div className="blog-listing-card position-relative">
                   <div className="blog-listing-img">
                     <Image
@@ -197,22 +197,22 @@ export default function page() {
                       height={350}
                     />
                   </div>
-                  <div className="blog-listing-title">
+                  <h2 className="blog-listing-title">
                     Why Digital Marketing Training in Kolkata Is Essential for
                     Today’s Job Market
-                  </div>
+                  </h2>
                   <div className="blog-listing-date">
                     <span>May 05</span>, 2025
                   </div>
-                  <div className="blog-listing-text">
+                  <p className="blog-listing-text">
                     In today’s digital world, businesses are shifting online
                     faster than ever. From small lo...
-                  </div>
+                  </p>
                 </div>
               </Link>
             </div>
-            <div className="col-md-6 col-lg-4">
-              <Link href="/" className="blog-listing-link">
+            <div className="col">
+              <Link href="/blog/slug" className="blog-listing-link">
                 <div className="blog-listing-card position-relative">
                   <div className="blog-listing-img">
                     <Image
@@ -222,22 +222,22 @@ export default function page() {
                       height={350}
                     />
                   </div>
-                  <div className="blog-listing-title">
+                  <h2 className="blog-listing-title">
                     Why Digital Marketing Training in Kolkata Is Essential for
                     Today’s Job Market
-                  </div>
+                  </h2>
                   <div className="blog-listing-date">
                     <span>May 05</span>, 2025
                   </div>
-                  <div className="blog-listing-text">
+                  <p className="blog-listing-text">
                     In today’s digital world, businesses are shifting online
                     faster than ever. From small lo...
-                  </div>
+                  </p>
                 </div>
               </Link>
             </div>
-            <div className="col-md-6 col-lg-4">
-              <Link href="/" className="blog-listing-link">
+            <div className="col">
+              <Link href="/blog/slug" className="blog-listing-link">
                 <div className="blog-listing-card position-relative">
                   <div className="blog-listing-img">
                     <Image
@@ -247,17 +247,17 @@ export default function page() {
                       height={350}
                     />
                   </div>
-                  <div className="blog-listing-title">
+                  <h2 className="blog-listing-title">
                     Why Digital Marketing Training in Kolkata Is Essential for
                     Today’s Job Market
-                  </div>
+                  </h2>
                   <div className="blog-listing-date">
                     <span>May 05</span>, 2025
                   </div>
-                  <div className="blog-listing-text">
+                  <p className="blog-listing-text">
                     In today’s digital world, businesses are shifting online
                     faster than ever. From small lo...
-                  </div>
+                  </p>
                 </div>
               </Link>
             </div>
