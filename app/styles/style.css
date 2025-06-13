@@ -2385,6 +2385,11 @@ select {
 textarea {
   min-height: 100px;
 }
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--main_color);
+}
 .contact-form {
   margin-inline: auto;
 }
@@ -2421,6 +2426,10 @@ textarea {
 }
 .address_blk.contact-form-page .sticky-location-pin {
   z-index: unset;
+}
+.address_blk.contact-form-page .address_card {
+  z-index: 2;
+  position: relative;
 }
 /* BASIC FORM ELEMENTS END */
 /* CONTACT BLOCK START */
@@ -4227,3 +4236,13 @@ form button:hover {
   text-overflow: ellipsis;
 }
 /* BLOG */
+.video-container.has-img {
+  position: relative;
+}
+.video-container.has-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 22%;
+}

@@ -327,6 +327,9 @@ export default function ServicesSections() {
                   </p>
                 </div>
                 <Tabs />
+                {/* Note to Backend */}
+                {/* In the above Tabs component we need to pass the data to be able to render the tabs and respective small cards */}
+                {/* From the home page I got this <Tabs tabsData={pageData.marketing_tab_repeater} /> */}
               </div>
             </div>
           </div>

@@ -8,8 +8,11 @@ import Link from "next/link";
 import NavLink from "../components/NavLink";
 import { PricingListItemCheck } from "../components/SVG";
 import Image from "next/image";
+import DiscoverScroll from "../components/DiscoverScroll";
+import HomeDiscoverSlider from "../components/HomeDiscoverSlider";
+import CheckMobile from "../components/CheckMobile";
 
-export default function ServicesLevelThreeSections() {
+export default function ServicesLevelThreeSections({ pageData }) {
   return (
     <>
       <section className="service-level-3-banner">
@@ -35,7 +38,13 @@ export default function ServicesLevelThreeSections() {
             </div>
             {/* <CheckScreenWidth setWidth={991}> */}
             <div className="col-md-6">
-              <div className="video-container">
+              <div className="video-container has-img">
+                <Image
+                  src="/images/services-level-three-gwebpro-banner.png"
+                  alt=""
+                  width={346}
+                  height={343}
+                />
                 <video
                   src="/images/service-level-3-banner.mp4"
                   autoPlay
@@ -146,7 +155,13 @@ export default function ServicesLevelThreeSections() {
           </div>
         </div>
       </section>
-      <FixedScrolling />
+      {/* <FixedScrolling /> */}
+      <CheckScreenWidth setWidth={991}>
+        <DiscoverScroll pageData={pageData} />
+      </CheckScreenWidth>
+      <CheckMobile setWidth={992}>
+        <HomeDiscoverSlider pageData={pageData} />
+      </CheckMobile>
       <section className="cta-dark-bg pad_cmn_blk">
         <div className="container">
           <div className="row">
