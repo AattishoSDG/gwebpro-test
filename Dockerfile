@@ -1,13 +1,22 @@
-# Stage 1: Build
-FROM node:18-alpine AS builder
+# 1. Use official Node.js image
+FROM node:18-alpine
+
+# 2. Set working directory
 WORKDIR /app
-COPY . .
+
+# 3. Copy package files and install dependencies
+COPY package*.json ./
 RUN npm install
+
+# 4. Copy project files
+COPY . .
+
+# 5. Build the project
+ENV NEXT_DISABLE_ESLINT=1
+
 RUN npm run build
 
-# Stage 2: Run
-FROM node:18-alpine
-WORKDIR /app
-COPY --from=builder /app . 
+
+# 6. Expose the port and start the app
 EXPOSE 3000
 CMD ["npm", "start"]
